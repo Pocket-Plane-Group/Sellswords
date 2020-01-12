@@ -1,0 +1,26 @@
+IF
+Detect([PC])
+Global("O#LLMeraeMiniquestAmbient","GLOBAL",0)
+GlobalLT("O#LLQuest","GLOBAL",25)
+!Allegiance(Myself,ENEMY)
+!Dead("O#LLPri2")
+THEN
+RESPONSE #100
+DialogInterrupt(FALSE)
+DisplayStringHead("O#LLPri2",@1011)
+Wait(3)
+DisplayStringHead(Myself,@1012)
+Wait(3)
+DisplayStringHead("O#LLPri2",@1013)
+Wait(3)
+DisplayStringHead("O#LLPri2",@1014)
+Wait(3)
+DisplayStringHead(Myself,@1015)
+Wait(3)
+DisplayStringHead("O#LLPri2",@1016)
+Wait(5)
+ActionOverride("O#LLPri2",MoveToPoint([552.1174]))
+ActionOverride("O#LLPri2",DestroySelf())
+DialogInterrupt(TRUE)
+SetGlobal("O#LLMeraeMiniquestAmbient","GLOBAL",1)
+END

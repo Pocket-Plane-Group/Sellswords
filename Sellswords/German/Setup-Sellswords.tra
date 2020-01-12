@@ -1,0 +1,234 @@
+@0 = ~The Sellswords mod for Baldur's Gate II~
+@1 = ~Ihr habt Thron des Bhaal nicht installiert. Thron des Bhaal wird aber für Sellswords benötigt.~
+@2 = ~Diese Passage ist mit dunkler Magie geschützt. Ihr braucht den passenden Schutzstein um sie zu passieren.~
+
+/* CHARACTER NAMES */
+@10 = ~Kimmuriel~
+@11 = ~Mutter Oberin Jeven~
+@12 = ~Lorn Jeven~
+@13 = ~Jey're Jeven~
+@14 = ~Jergan~
+@15 = ~K'Hui~
+@16 = ~Vintul~
+@17 = ~Mas'sai~
+@18 = ~Nelros~
+@19 = ~Koba~
+@20 = ~Lavaes~
+@21 = ~Kapitän Jeven~
+@22 = ~Zedeon~
+@23 = ~Merae Jeven~
+@24 = ~Bor Jeven~
+
+/* ITEMS */
+@100 = ~Eine Drow-Notiz~
+@101 = ~Zuerst sehen die Runen unbekannt aus, doch dann erkennt Ihr, dass es eine Handschift der Drow ist. Nach Adalons Zauber versteht Ihr diese Sprache immer noch und seid in der Lage, den Inhalt zu entziffern. Der Text selbst ist sehr einfach: "Wir haben Euch ein Angebot zu machen, welches sehr profitabel für Euch sein könnte. Kommt und sprecht mit mir in Enges Geschäft. Es befindet sich über dem Abenteurer-Markt. Ihr Oberflächenbewohner solltet dies wissen. Die Zeit drängt."~
+@102 = ~Krummsäbel +4, Der Zorn~
+@103 = ~Dieser Krummsäbelt riecht nach uralter Vergeltung und ist offensichtlich blutdürstig. Jeder, der wahrlich guten Herzens ist, sollte nicht daran denken ihn zu führen.
+
+EIGENSCHAFTEN:
+
+Regeneration: 1 TP alle 6 Sekunden
+
++1 zur Stärke wenn er getragen wird
+Schaden: 1W8 + 4, +1W4 Feuerschaden
+ETWO: +4 Bonus
+Schadenstyp: Hiebwaffe
+Gewicht: 4
+Fertigkeit: Krummsäbel
+Initiativefaktor: 2
+Type: 1-händig
+Mindeststärke: 8
+
+Nicht verwendbar von:
+
+Guten Gesinnungen
+Magiern
+Klerikern~
+@104 = ~Der erste Schutzstein der Mutter Oberin~
+@105 = ~Der zweite Schutzstein der Mutter Oberin~
+@106 = ~Der dritte Schutzstein der Mutter Oberin~
+@107 = ~Der Schutzstein zur Schatzkammer der Mutter Oberin~
+@108 = ~Dieser Schutzstein erlaubt es Euch, die erste Barriere zu passieren. Ihr braucht ihn, um das Heiligtum der Mutter Oberin zu betreten, wenn Ihr Jarlaxle wirklich befreien wollt.~
+@109 = ~Dieser Schutzstein erlaubt es Euch, die zweite Barriere zu passieren. Ihr braucht ihn, um das Heiligtum der Mutter Oberin zu betreten, wenn Ihr Jarlaxle wirklich befreien wollt.~
+@110 = ~Dieser Schutzstein erlaubt es Euch, das private Heiligtum der Mutter Oberin zu betreten. Trotzdem braucht Ihr noch einen weiteren Schutzstein für die Schatzkammer.~
+@111 = ~Dieser Schutzstein erlaubt es Euch, die Schatzkammer des Hauses Jeven zu betreten. Jarlaxle sollte sich darin befinden.~
+@112 = ~Ein Schutzstein der Drow~
+@113 = ~Oft mit magischem Bildzeichen, Runen oder Symbolen gekennzeichnet, sind Schlüsselsteine stark verzauberte Gegenstände, die dazu bestimmt sind, ihrem Träger Durchgang durch magisch geschützte Gebiete zu gewähren. Weil die meisten Schlüsselsteine ziemlich einzigartig und in ihrer Art besonders sind, ist es selten, einen für mehrere Zwecke zu finden.~
+@114 = ~Ein Heiltrank der Drow~
+@115 = ~Dieser Trank heilt eine spezielle Art der Blindheit, die durch Drowmagie ausgelöst wurde.~
+@116 = ~Zedeons Zauberbuch~
+@117 = ~Der Name des Eigentümers ist in die obere linke Ecke eingraviert. Dieses Zauberbuch gehört offensichtlich nicht Lavaes.~
+@118 = ~Kettenrüstung der Oberin~
+@119 = ~Diese leichte Kettenrüstung riecht nach Blut. Ihre vorherige Eigentümerin hatte vor kurzer Zeit ihr unschönes Ableben. Offensichtlich von einen Drow hergestellt, emittiert das Kettenhemd eine seltsame, fremde Aura. Es ist dennoch sehr stark und gut gearbeitet und nützt seinem neuen Eigentümer wahrscheinlich sehr.
+
+EIGENSCHAFTEN:
+
++1 zur Geschicklichkeit wenn es getragen wird
+
+Rüstungsklasse: 2
+Gewicht: 7
+Mindeststärke: 5
+
+Nicht verwendbar von:
+ Druiden 
+ Magiern~
+@120 = ~Zauberstab der Mutter Oberin~
+@121 = ~Dieser Zauberstab ist zart und schlank, aber er verbirgt den puren Tod in sich. Jede Ladung gibt einen Energiebolzen frei, der sogar den stärksten Feind sofort töten kann.
+
+EIGENSCHAFTEN:
+
+Tötet das Ziel, es sei denn, es erfolgt ein erfolgreicher Rettungswurf gegen Zauberstäbe, der mit -2 erschwert ist.
+
+Reichweite: 30 Meter
+Wirkungsbereich: 1 Kreatur
+
+Nicht verwendbar von:
+
+Kriegern
+Druiden
+Klerikern
+Dieben~
+@122 = ~Armschienen der Drinne~
+@123 = ~Gerüchte besagen, dass diese Armschienen einst Dinin Do'Urden gehörten, der Bruder von Drizzt und ein Söldner der Bregan D'aerthe. Er wurde von seiner Schwester Vierna in eine Drinne verwandelt und später bei einem Überfall auf den Zwergenkönig Bruenor Schlachtenhammer getötet.
+
+EIGENSCHAFTEN:
+
+Die Stärke wird auf 19 gesetzt.
+
+Gewicht:  2
+
+Nicht verwendbar von: 
+
+Dieben
+Magiern~
+
+/* DISPLAY STRING HEADS */
+@1000 = ~Ihr habt gerufen? Wartet... Kimmuriel? Was geht hier vot?...~
+@1001 = ~Auf sie, meine Schatten! Noch mehr Narren für meine Sammlung!~
+@1002 = ~Tod dem Haus Jeven!~
+@1003 = ~Euer Haus ist verloren! Rennt um Euer Leben, Ihr Narren!~
+@1004 = ~Ein Bewohner der Oberfläche? Ihr werdet mit dem Rest des Hauses fallen!~
+@1005 = ~House Jeven wird fallen!~
+@1006 = ~Eindringlinge! Sterbt im Namen Lolths!~
+@1007 = ~Ihr habt mich enttäuscht, Zedeon.~
+@1008 = ~Meister, bitte, werft mich nicht hinaus! Mein Zauberbuch wurde mir gestohlen...~
+@1009 = ~Und ohne es seid Ihr für mich nutzlos. Für Euch ist kein Platz mehr in unserer Zauberschule.~
+@1010 = ~Nein!~
+@1011 = ~Wer ist der Vater des Kindes?~
+@1012 = ~Jarlaxle, meine Herrin. Ich sollte seine Gemahlin sein. Er versprach...~
+@1013 = ~Dummes Mädchen. Seine Versprechen sind jetzt nichts mehr wert.~
+@1014 = ~Ihr habt mit Jey'Re Zwillinge. Wie der Brauch es befiehlt, wird Euer dritter Sohn an Lolth geopfert werden, sobald er geboren wurde.~
+@1015 = ~Nein! Jarlaxle hat geschworen, dass er dies nicht zulassen wird!~
+@1016 = ~Dann betet, dass Ihr eine Tochter bekommt. Oder wir werden sie vielleicht ebenfalls opfern! Hahaha!~
+@1017 = ~Bitte, will mir denn niemand helfen?~
+@1018 = ~Kriecht unter einen Stein und verreckt, Ihr Krüppel!~
+@1019 = ~Das Haus Jeven hat keine verwendung für blinde Krieger!~
+@1020 = ~Es gibt einen Heiltrank gegen meine Blindjeit. Ich kann wieder für das Haus Jeven töten.~
+@1021 = ~Ich werde Euch belohnen, wenn Ihr mir den Heiltrank bringt.~
+@1022 = ~Hilfe! Bitte! Sie wollen meine Schwester töten!~
+@1023 = ~Kommt mit mir! Wenn Ihr nicht helft, dann werden sie sie töten!~
+@1024 = ~Meister! Ich brachte Euch das Kind des Bhaal!~
+@1025 = ~Gut. Tötet <PRO_HIMHER> und durchsucht <PRO_HISHER> Körper. Schnell, bevor es die Mutter Oberin herausfindet!~
+@1026 = ~Könnte ich einen Moment Eurer Zeit beanspruchen, oh größter aller Oberflächenbewohner?~
+
+/* JOURNAL ENTRIES */
+
+/* ATHKATLA */
+/* DONE */ @9999 = ~Ein seltsamer Drow.
+
+Ein Bote der Drow offerierte mir eine Partnerschaft mit den Bregan D'aerthe, einer Drow-Söldnergruppe. Ich habe abgelehnt.~
+@10000 = ~Ein seltsamer Drow.
+
+Ein Kind begegnete mir auf der Promenade und sagte mir, dass ein seltsamer Drow mich in Enges Geschäft erwartet. Ich habe auch noch einen Hinweis bekommen, dass es dringend ist.~
+@10001 = ~Ein seltsamer Drow.
+
+Der Drowbote sagte, dass ich mit den Bregan D'aerthe zusammen arbeiten werde, eine Drow-Söldnergruppe. Ihr Leutnant, Kimmuriel, wartet auf mich in den Kanälen unter dem Tempelbezirk.~
+
+/* MENZOBERRANZAN */
+@10002 = ~Die Mietklingen.
+
+Ich bin endlich in Menzoberranzan. Ich traf Mutter Oberin Jeven und erhielt ihre ersten Befehle: den Hauptmann ihrer Wache außerhalb der Taverne zu treffen und alle Aufgaben zu erledigen die er mir aufträgt.~
+@10003 = ~Die Mietklingen.
+
+Der Hauptmann der Oberin befahl mir, zur östlichen Plattform zu gehen und zu ergründen, warum die männlichen Kämpfer des Hauses nach dem Wettkampf verärgert sind.~
+@10004 = ~Die Mietklingen.
+
+Ich fand heraus, warum die Kämpfer des Hauses Jeven verärgert waren und lieferte den Betrüger an sie aus. Jetzt geht es zurück zur Berichterstattung beim Hauptmann.~
+@10005 = ~Die mietklingen.
+
+Ich war nicht in der Lage herauszufinden, wer bei dem Wettkampf des Hauses betrogen hatte, daher streckte ich alle Kämpfer nieder. Jetzt geht es zurück zur Berichterstattung beim Hauptmann.~
+@10006 = ~Die Mietklingen.
+
+Der Hauptmann befahl mir, Spione eines rivalisierenden Hauses zu beseitigen. Alle von ihnen tragen heute etwas Rotes auf den Straßen von Menzoberranzan. Aber es gibt auch einen Doppelagenten der Bregan D'aerthe unter ihnen. Ich sollte zuerst mit Kimmuriel sprechen.~
+@10007 = ~Die Mietklingen.
+
+Kimmuriel bat mich, zwei Githyanki auf der westlichen Plattform zu töten und an ihren Schutzstein zu gelangen. Bevor ich sie töte, soll ich herausfinden, was sie vorhaben.~
+@10008 = ~Die Mietklingen.
+
+Die Githyanki griffen mich beinahe sofort an. Sie nannten Jarlaxle den Kalach-Cha: den Träger des Silberschwertes, ein Heiligtum ihrer Rasse.~
+/* DONE */ @10009 = ~Die Mietklingen.
+
+Ich bat Kimmuriel, mich sofort wieder zurück nach Athkatla zu schicken. Dieses Abenteuer ist beendet.~
+@10010 = ~Die Mietklingen.
+
+Kimmuriel bat mich, die Behausungen der Illithiden aufzusuchen. Ich soll mit ihnen einen Pakt gegen die Githyanki schließen.~
+@10011 = ~Die Mietklingen.
+
+Ich tötete die Spione, aber der Hauptmann versuchte mich zu beseitigen, als ich zurückkehrte! Natürlich ist er jetzt tot - getötet von keinem geringeren als Artemis Entreri. Kimmuriel sollte dies erfahren.~
+@10012 = ~Die Mietklingen.
+
+Eine verrückte Drowpriesterin hielt mich auf und verlangte eine Gefälligkeit von mir. Ich soll einige Gefolgsleute der Eilistraee auf der südwestlichen Plattform beseitigen. Ich könnte es tun, oder aber ich überzeuge sie zu fliehen.~
+/* DONE */ @10013 = ~Die Mietklingen.
+
+Die Priesterin war sehr glücklich und belohnte mich, wie sie es versprochen hatte. Kein Wort mehr von braunhäutigen und dunkelhaarigen Drow, zumindest in diesem Teil von Menzoberranzan.~
+/* DONE */ @10014 = ~Die Mietklingen.
+
+Ich wollte die Gefolgsleute der Eilistraee nicht töten und entschied mich, sie gehen zu lassen.~
+@10015 = ~Die Mietklingen.
+
+Ein Duergar, Koba, bat mich, ihre Botschaft von den Schatten zu säubern. Die Botschaft ist auf der Karte verzeichnet.~
+/* DONE */ @10016 = ~The Sellswords.
+
+Ich tötete die Schatten und erhielt meine "Belohnung": Die Duergar versuchten sofort, mich anzgreifen, und ich musste sie alle töten. Ein weiterer aufregender Tag in Menzoberranzan.~
+@10017 = ~Die Mietklingen.
+
+Ein Drowmagier, Lavaes, bat mich um Hilfe. Lavaes wollte seine Seele einem Dämon verkaufen, überlegte es sich dann im letzten Moment doch anders. Jetzt will der Dämon nicht mehr gehen. Da ich ja keine Seele mehr habe, könnte ich ja mit dem Dämon handeln, anstelle von Lavaes.~
+/* DONE */ @10018 = ~Die Mietklingen.
+
+Ich verkaufte meine "Seele" an den Dämon und erhielt meine Belohnung. Lavaes ist jetzt frei.~
+@10019 = ~Die Mietklingen.
+
+Ich fand die schwarze Arena, in welcher die Drowkrieger ihr Geschick mit anderen Kämpfern, Golems und Untoten testen. Keine Fraktion hat die Triade zu Ende bringen können. Ich könnte der erste sein.~
+/* DONE */ @10020 = ~Die Mietklingen.
+
+Ich kämpfte drei Mal in der schwarzen Arena und erhielt meine letzte Belohnung. Die Triaden sind vorbei.~
+@10021 = ~Die Mietklingen.
+
+Die Mutter Oberin tauchte vor uns auf und beschuldigte Kimmuriel des Verrats. Um uns ihr zu beweisen, sollen wir ihren verräterischen Sohn, Lorn Jeven, töten. Ein weiterer Anwärter als Mitglied der Bregan D'aerthe. Kimmuriel will ihn nicht töten, aber wir haben wenig Möglichkeiten.~
+@10022 = ~Die Mietklingen.
+
+Kimmuriel konnte einen anderen Krieger in ein identisches Abbild von Lorn Jeven verwandlen und trennte kalt dessen Kopf ab. Er soll als Beweis dienen. Jetzt muss ich Artemis Entreri nahe der ersten Barriere zum Palast der Mutter Oberin treffen. Entreri wird mir sagen, wer den ersten Schutzstein hat.~
+@10023 = ~Die Mietklingen.
+
+Artemis Entreri sagte mir, dass sich der erste Schutzstein im Besitz des engen Vertrauten der Mutter Oberin, Jey'Re Jeven, befindet. Er soll sich jetzt in den Lustkammern befinden und ich werde ihn möglicherweise töten müssen. Danach soll ich zum Palast eilen, daher sollte ich alle Aufgaben vorher lösen bevor ich nach Jey'Re suche.~
+@10024 = ~Die Mietklingen.
+
+Ich habe alle drei Schutzsteine. Jetzt geht es nur noch vorwärts, Richtung Palast der Mutter Oberin und Jarlaxle.~
+/* DONE */ @10025 = ~Die Mietklingen.
+
+Ich bin endlich aus Menzoberranzan zurück. Die Mutter Oberin Jeven wurde getötet. Kimmuriel and Artemis Entreri befreiten Jarlaxle aus seiner Versteinerung. Ich wurde mit dem Schatz belohnt.~
+/* DONE */ @10026 = ~Die Mietklingen.
+
+Ich griff an, obwohl ich nicht sollte, und wurde ohne Erklärung zurück nach Athkatla teleportiert. Dieses Abenteuer ist vorbei.~
+
+/* MAP NOTES */
+
+@100000 = ~Taverne~
+@100001 = ~Kammern der Lust~
+@100002 = ~Erste Barriere~
+@100003 = ~Zweite Barriere~
+@100004 = ~Palast der Mutter Oberin~
+@100005 = ~Schwarze Arena~
+@100006 = ~Haus von Lavae~
+@100007 = ~Duergar Botschaft~
+@100008 = ~Marktplatz~

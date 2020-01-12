@@ -1,0 +1,64 @@
+IF
+Detect([PC])
+Global("O#LLSlaveGirlMiniquestAmbient","GLOBAL",0)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+DialogInterrupt(FALSE)
+DisplayStringHead(Myself,@1022)
+Wait(1)
+MoveToPoint([1410.476])
+SetGlobal("O#LLSlaveGirlMiniquestAmbient","GLOBAL",1)
+END
+
+IF
+Detect([PC])
+Global("O#LLSlaveGirlMiniquestAmbient","GLOBAL",1)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+DisplayStringHead(Myself,@1023)
+Wait(1)
+MoveToPoint([800.939])
+SetGlobal("O#LLSlaveGirlMiniquestAmbient","GLOBAL",2)
+END
+
+IF
+Detect([PC])
+GlobalGT("O#LLSlaveGirlMiniquestAmbient","GLOBAL",0)
+Global("O#LLSlaveGirlMiniquestBandits","GLOBAL",0)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+CreateCreature("O#LLBan1",[702.951],14)
+CreateCreature("O#LLBan2",[655.1000],13)
+CreateCreature("O#LLBan3",[642.1036],12)
+SetGlobal("O#LLSlaveGirlMiniquestBandits","GLOBAL",1)
+END
+
+IF
+Detect([PC])
+Global("O#LLSlaveGirlMiniquestAmbient","GLOBAL",2)
+!Allegiance(Myself,ENEMY)
+!Dead("O#LLBan2")
+THEN
+RESPONSE #100
+DisplayStringHead(Myself,@1024)
+Wait(3)
+DisplayStringHead("O#LLBan2",@1025)
+Wait(1)
+AddExperienceParty(20000)
+ActionOverride("O#LLBan1",Enemy())
+ActionOverride("O#LLBan2",Enemy())
+ActionOverride("O#LLBan3",Enemy())
+SetGlobal("O#LLSlaveGirlMiniquestAmbient","GLOBAL",3)
+END
+
+IF
+Global("O#LLSlaveGirlMiniquestAmbient","GLOBAL",3)
+THEN
+RESPONSE #100
+MoveToPoint([1129.619])
+SetGlobal("O#LLSlaveGirlMiniquestAmbient","GLOBAL",4)
+DestroySelf()
+END

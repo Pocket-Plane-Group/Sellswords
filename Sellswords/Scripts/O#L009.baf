@@ -1,0 +1,54 @@
+// Treasury
+IF
+Global("O#LLQuestJarlaxlePlaced","GLOBAL",0)
+THEN
+RESPONSE #100
+Explore()
+CreateCreature("O#LLJARL",[704.808],0)
+SetGlobal("O#LLQuestJarlaxlePlaced","GLOBAL",1)
+END
+
+IF
+Global("O#LLQuestFinale","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#LLQuestPalace","GLOBAL",4)
+SetGlobal("O#LLQuestFinale","GLOBAL",1)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("O#LLCut8")
+END
+
+// Failsafe: return to Athkatla
+IF
+Global("O#LLReturnHome","GLOBAL",0)
+OR(3)
+Global("O#LLReturnHomeArte","GLOBAL",1)
+Global("O#LLReturnHomeKimm","GLOBAL",1)
+Global("O#LLReturnHomeJarl","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#LLQuest","GLOBAL",1000)
+EraseJournalEntry(@10002)
+EraseJournalEntry(@10003)
+EraseJournalEntry(@10004)
+EraseJournalEntry(@10005)
+EraseJournalEntry(@10006)
+EraseJournalEntry(@10007)
+EraseJournalEntry(@10008)
+EraseJournalEntry(@10010)
+EraseJournalEntry(@10011)
+EraseJournalEntry(@10012)
+EraseJournalEntry(@10015)
+EraseJournalEntry(@10017)
+EraseJournalEntry(@10019)
+EraseJournalEntry(@10021)
+EraseJournalEntry(@10022)
+EraseJournalEntry(@10023)
+EraseJournalEntry(@10024)
+AddJournalEntry(@10026,QUEST_DONE)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("O#LLCut1")
+END
+

@@ -1,0 +1,19 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+Wait(1)
+MoveViewObject(Player1,INSTANT)
+CreateCreature("O#LLISTE",[2171.1030],0)
+Wait(1)
+ActionOverride("O#LLISTE",MoveToPoint([2300.1100]))
+Wait(1)
+ActionOverride("O#LLISTE",DisplayStringHead(Myself,@1000))
+Wait(3)
+ActionOverride("O#LLKIMM",ReallyForceSpell("O#LLISTE",MIND_CRIPPLE))
+Wait(1)
+ActionOverride("O#LLISTE",Kill(Myself))
+Wait(3)
+ActionOverride("O#LLKIMM",StartDialogueNoSet(Player1))
+END

@@ -1,0 +1,18 @@
+// Lavaes's house
+IF
+Global("O#LLSpawnO#L003","GLOBAL",0)
+THEN
+RESPONSE #100
+Explore()
+CreateCreature("O#LLLAVA",[686.919],0)
+SetGlobal("O#LLSpawnO#L003","GLOBAL",1)
+END
+
+IF
+Global("O#LLLAVAQuest","GLOBAL",1)
+Global("O#LLSpawnO#L003Dem","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLDEM",[1538.626],1)
+SetGlobal("O#LLSpawnO#L003Dem","GLOBAL",1)
+END

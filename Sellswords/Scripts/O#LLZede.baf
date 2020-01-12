@@ -1,0 +1,20 @@
+IF
+Detect([PC])
+Global("O#LLZedeonMiniquestAmbient","GLOBAL",0)
+!Allegiance(Myself,ENEMY)
+!Dead("O#LLZedM")
+THEN
+RESPONSE #100
+DialogInterrupt(FALSE)
+DisplayStringHead("O#LLZedM",@1007)
+Wait(3)
+DisplayStringHead(Myself,@1008)
+Wait(3)
+DisplayStringHead("O#LLZedM",@1009)
+Wait(3)
+DisplayStringHead(Myself,@1010)
+ApplySpell("O#LLZedM",DRYAD_TELEPORT)
+DialogInterrupt(TRUE)
+SetGlobal("O#LLZedeonMiniquestAmbient","GLOBAL",1)
+END
+

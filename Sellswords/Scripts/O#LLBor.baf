@@ -1,0 +1,21 @@
+IF
+Detect([PC])
+!Allegiance(Myself,ENEMY)
+!Dead("O#LLTAM2")
+!Dead("O#LLTAW1")
+Global("O#LLBorMiniquestAmbient","GLOBAL",0)
+THEN
+RESPONSE #100
+DialogInterrupt(FALSE)
+DisplayStringHead(Myself,@1017)
+Wait(3)
+DisplayStringHead("O#LLTAM2",@1018)
+Wait(3)
+DisplayStringHead("O#LLTAW1",@1019)
+Wait(3)
+DisplayStringHead(Myself,@1020)
+Wait(3)
+DisplayStringHead(Myself,@1021)
+DialogInterrupt(TRUE)
+SetGlobal("O#LLBorMiniquestAmbient","GLOBAL",1)
+END

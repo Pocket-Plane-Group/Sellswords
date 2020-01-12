@@ -1,0 +1,14 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+ActionOverride("O#LLARTE",DestroySelf())
+Wait(1)
+FadeToColor([20.0],0)
+RestorePartyLocations()
+MultiPlayerSync()
+Wait(1)
+FadeFromColor([20.0],0)
+EndCutSceneMode()
+END

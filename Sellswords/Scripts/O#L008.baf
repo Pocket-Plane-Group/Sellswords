@@ -1,0 +1,40 @@
+// Palace, second chamber
+IF
+Global("O#LLQuestPalace","GLOBAL",0)
+THEN
+RESPONSE #100
+Explore()
+CreateCreature("O#LLMATR",[697.585],3)
+CreateCreature("O#LLGUA1",[634.503],3)
+CreateCreature("O#LLGUA2",[835.657],3)
+CreateCreature("O#LLGUA3",[606.578],3)
+CreateCreature("O#LLGUA4",[696.639],3)
+CreateCreature("O#LLGUA5",[656.708],3)
+CreateCreature("O#LLGUA6",[756.759],3)
+GiveItemCreate("O#LW4","O#LLMATR",1,0,0)
+GiveItemCreate("rods03","O#LLMATR",1,0,0)
+SetGlobal("O#LLQuestPalace","GLOBAL",1)
+END
+
+IF
+Global("O#LLQuestPalace","GLOBAL",1)
+Dead("O#LLMATR")
+Dead("O#LLGUA1")
+Dead("O#LLGUA2")
+Dead("O#LLGUA3")
+Dead("O#LLGUA4")
+Dead("O#LLGUA5")
+Dead("O#LLGUA6")
+THEN
+RESPONSE #100
+CreateCreatureObjectOffset("O#LLARTE",Player1,[30.30])
+SetGlobal("O#LLQuestPalace","GLOBAL",2)
+END
+
+IF
+Global("O#LLQuestPalace","GLOBAL",4)
+THEN
+RESPONSE #100
+ActionOverride("O#LLARTE",DestroySelf())
+SetGlobal("O#LLQuestPalace","GLOBAL",5)
+END

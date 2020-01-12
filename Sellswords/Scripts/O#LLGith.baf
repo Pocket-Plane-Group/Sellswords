@@ -1,0 +1,27 @@
+IF
+InMyArea(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+Global("O#LLKimmurielTasks","GLOBAL",2) 
+Global("O#LLKimmurielGithAttack","GLOBAL",1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+AttackedBy([GOODCUTOFF],DEFAULT)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+SetGlobal("O#LLKimmurielGithAttack","GLOBAL",1)
+Enemy()
+END
+
+IF
+Global("O#LLKimmurielGithAttack","GLOBAL",1)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+Enemy()
+END

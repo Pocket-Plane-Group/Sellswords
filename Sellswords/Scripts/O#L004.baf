@@ -1,0 +1,23 @@
+// House of Shades
+IF
+Global("O#LLHouseShadesExplore","GLOBAL",0)
+THEN
+RESPONSE #100
+Explore()
+SetGlobal("O#LLHouseShadesExplore","GLOBAL",1)
+END
+
+IF
+Global("O#LLHouseShades","GLOBAL",1)
+Global("O#LLSpawnO#L004","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLSHAD",[983.1035],0)
+CreateCreature("O#LLSHA1",[479.716],0)
+CreateCreature("O#LLSHA2",[663.856],0)
+CreateCreature("O#LLSHA3",[1516.760],0)
+CreateCreature("O#LLSHA4",[1235.1209],0)
+CreateCreature("O#LLSHA5",[1254.1109],0)
+CreateCreature("O#LLSHA6",[1290.657],0)
+SetGlobal("O#LLSpawnO#L004","GLOBAL",1)
+END

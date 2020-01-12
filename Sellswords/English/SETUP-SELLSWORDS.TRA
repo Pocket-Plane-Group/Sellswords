@@ -1,0 +1,225 @@
+@0 = ~The Sellswords mod for Baldur's Gate II~
+@1 = ~You do not appear to have the Throne of Bhaal expansion pack installed. Throne of Bhaal is required for the Sellswords mod.~
+@2 = ~This passage is protected with dark magic. You need the apropriate wardstone to pass it.~
+
+/* CHARACTER NAMES */
+@10 = ~Kimmuriel~
+@11 = ~Matron Mother Jeven~
+@12 = ~Lorn Jeven~
+@13 = ~Jey're Jeven~
+@14 = ~Jergan~
+@15 = ~K'Hui~
+@16 = ~Vintul~
+@17 = ~Mas'sai~
+@18 = ~Nelros~
+@19 = ~Koba~
+@20 = ~Lavaes~
+@21 = ~Captain Jeven~
+@22 = ~Zedeon~
+@23 = ~Merae Jeven~
+@24 = ~Bor Jeven~
+
+/* ITEMS */
+@100 = ~A Drow Note~
+@101 = ~The runes look unfamiliar at first, but then you realize it is drow handwriting. You still understand the language after Adalon's spell and are able to decipher its contents. The text itself is very simple: "We need to discuss an offer that may prove to be very profitable for you. Come and speak to me at Enge's shop. It is located right above the Adventurer's Mart. You surfacers should know where such things are. Time is of the essence."~
+@102 = ~Scimitar +4, Wraith~
+@103 = ~This scimitar reeks of some long-dead vengeance and is obviously hungry for blood. Too hungry for anyone truly good at heart to even consider wielding it.
+
+STATISTICS:
+
+Equipped Ability :
+ Regeneration: 1 hp every 6 seconds
+ +1 to Strength while worn
+Damage: 1D8 + 4, +1D4 fire damage
+THACO: +4 bonus
+Damage type: Slashing
+Weight: 4
+Proficiency type: Scimitar
+Speed Factor: 2
+Type: 1-handed
+Requires: 8 Strength
+Not usable by:
+Good Alignment
+Mage
+Cleric~
+@104 = ~Matron Mother's First Wardstone~
+@105 = ~Matron Mother's Second Wardstone~
+@106 = ~Matron Mother's Third Wardstone~
+@107 = ~Matron Mother's Treasury Wardstone~
+@108 = ~This wardstone will allow you access past the first barrier. You need it to enter the Matron Mother's sanctuary if you truly want to free Jarlaxle.~
+@109 = ~This wardstone will allow you access past the second barrier. You need it to enter the Matron Mother's sanctuary if you truly want to free Jarlaxle.~
+@110 = ~This wardstone will allow you access to the Matron Mother's private sanctuary. You will need one more wardstone for the treasury, however.~
+@111 = ~This wardstone will allow you access to the House Jeven's treasury. Jarlaxle should be within.~
+@112 = ~A Drow Wardstone~
+@113 = ~Often marked with magical glyphs, runes, or symbols, wardstones are powerfully enchanted items intended to grant their bearer passage through magically guarded areas. As most wardstones are quite unique and specific in their nature, it is rare to find one with more than one purpose.~
+@114 = ~A Drow Cure~
+@115 = ~This potion cures a very specific type of blindness caused by drow magic.~
+@116 = ~Zedeon's Spellbook~
+@117 = ~The owner's name is etched in the upper left corner. This spellbook obviously does not belong to Lavaes.~
+@118 = ~Matron's Chainmail~
+@119 = ~This light mail smells of blood. Its previous owner had likely met his untimely end not long ago. Obviously of drow make, the chainmail emits a strange aura of foreboding. It is strong and well-crafted, however, and will likely serve its new owner well.
+
+STATISTICS:
+
+Equipped Ability :
+ +1 to Dexterity while worn
+Armor Class: 2
+Weight: 7
+Requires: 5 Strength
+Not Usable By:
+ Druid 
+ Mage~
+@120 = ~Matron's Wand~
+@121 = ~This wand is delicate and slender, but it conceals pure death within. Each charge releases a bolt of energy that can instantly kill even the strongest enemy.
+
+STATISTICS:
+
+Effect:  Kill target unless save vs. wands with -2 penalty
+Range:  100 ft
+Area:  1 creature
+Not usable by:
+Fighter
+Druid
+Cleric
+Thief~
+@122 = ~Drider's Gauntlets~
+@123 = ~The rumor goes that these hands once belonged to Dinin Do'Urden, Drizzt's brother and a mercenary of Bregan D'aerthe. He was turned into a drider by his sister Vierna and later killed in a raid against the dwarven king Bruenor Battlehammer.
+
+STATISTICS:
+
+Strength:  set to 19
+Weight:  2
+Not usable by: 
+ Thief
+ Mage~
+
+/* DISPLAY STRING HEADS */
+@1000 = ~You called? Wait... Kimmuriel? What is going on?..~
+@1001 = ~At them, my shades! More fools for my collection!~
+@1002 = ~Death to House Jeven!~
+@1003 = ~Your house is lost! Run for your lives, fools!~
+@1004 = ~A surfacer? You will fall with the rest of the house!~
+@1005 = ~House Jeven will fall!~
+@1006 = ~Intruders! Die in the name of Lolth!~
+@1007 = ~You disappointed me, Zedeon.~
+@1008 = ~Master, please, don't cast me out! My spellbook was stolen...~
+@1009 = ~And you are of no use to me without it. There is no place for you at Sorcere any longer.~
+@1010 = ~No!~
+@1011 = ~Who is the child's father?~
+@1012 = ~Jarlaxle, my mistress. I was to be his consort. He promised...~
+@1013 = ~Foolish girl. His promises are worth nothing now.~
+@1014 = ~You have twins with Jey'Re. As custom demands, your third son will be sacrificed to Lolth as soon as he is born.~
+@1015 = ~No! Jarlaxle swore he wouldn't let it happen!~
+@1016 = ~Then pray you have a daughter. Or maybe we'll sacrifice her anyway! Hahaha!~
+@1017 = ~Please, will no one help me?~
+@1018 = ~Crawl under a rock and die, cripple!~
+@1019 = ~House Jeven has no need for blind warriors!~
+@1020 = ~There is a cure for my blindness. I can kill for House Jeven again.~
+@1021 = ~I will reward you if you bring me the cure.~
+@1022 = ~Help! Please! They will kill my sister!~
+@1023 = ~Come with me! If you don't help, they'll murder her!~
+@1024 = ~Master! I brought you the Child of Bhaal!~
+@1025 = ~Good. Kill <PRO_HIMHER> and loot <PRO_HISHER> body quickly, before the Matron finds out!~
+@1026 = ~May I have a moment of your time, oh greatest of surfacers?~
+
+/* JOURNAL ENTRIES */
+
+/* ATHKATLA */
+/* DONE */ @9999 = ~A strange drow.
+
+A drow messenger offered me a partnership with Bregan D'aerthe, a mercenary drow group. I declined.~
+@10000 = ~A strange drow.
+
+A child approached me in the Promenade and told me that a strange drow awaited me inside Enge's shop. I was also given a note that spoke of urgency.~
+@10001 = ~A strange drow.
+
+The drow messenger said that I'd be working with Bregan D'aerthe, a mercenary drow group. Their lieutenant, Kimmuriel, is waiting for me in the sewers under the Temple District.~
+
+/* MENZOBERRANZAN */
+@10002 = ~The Sellswords.
+
+I am finally in Menzoberranzan. I met Matron Mother Jeven and received her first orders: meet the captain of her guard outside and complete any tasks he gives me.~
+@10003 = ~The Sellswords.
+
+The Matron Mother's captain ordered me to go to the east platform and find out why the House's male fighters are angry long after the championship is over.~
+@10004 = ~The Sellswords.
+
+I found out why House Jeven's fighters were angry and delivered the cheater into their hands. Now to report back to the captain.~
+@10005 = ~The Sellswords.
+
+I wasn't able to discover who cheated in the House championship, and I slaughtered all the fighters. Now to report back to the captain.~
+@10006 = ~The Sellswords.
+
+The captain ordered me to kill spies from a rival house. All of them are wearing something red on the streets of Menzoberranzan today. But there is also a double agent from Bregan D'aerthe among them. I should talk to Kimmuriel first.~
+@10007 = ~The Sellswords.
+
+Kimmuriel asked me to kill two githyanki on the west platform and retrieve the wardstone they possess. Before killing them, however, I must find out what they're up to.~
+@10008 = ~The Sellswords.
+
+The githyanki attacked me almost immediately. They called Jarlaxle the Kalach-Cha: the wielder of The Silver Sword, a great artifact of their race.~
+/* DONE */ @10009 = ~The Sellswords.
+
+I asked Kimmuriel to send me back to Athkatla immediately. This adventure is over.~
+@10010 = ~The Sellswords.
+
+Kimmuriel asked me to visit the envoys of the illithid. I have to secure an alliance with them against the githyanki.~
+@10011 = ~The Sellswords.
+
+I killed the spies, but the captain tried to assassinate me when I returned! Needless to say, he is dead - killed by none other but Artemis Entreri. Kimmuriel should know about this.~
+@10012 = ~The Sellswords.
+
+A mad drow priestess stopped me and demanded a service from me. I must kill some followers of Eilistraee at the southwestern platform. I could do it, or I could convince them to flee instead.~
+/* DONE */ @10013 = ~The Sellswords.
+
+The priestess was very happy and rewarded me like she promised. No more talk of brown-skinned and dark-haired drow, in this section of Menzoberranzan at least.~
+/* DONE */ @10014 = ~The Sellswords.
+
+I didn't want to kill Eilistraee's followers and decided to let them go instead.~
+@10015 = ~The Sellswords.
+
+A duergar, Koba, asked me to liberate their embassy from shades. The embassy is marked on the map.~
+/* DONE */ @10016 = ~The Sellswords.
+
+I killed the shades, and received my "reward": the duergar immediately tried to attack me, and I had to slaughter them all. Just another day in Menzoberranzan.~
+@10017 = ~The Sellswords.
+
+A drow mage, Lavaes, asked for my help. Lavaes wanted to sell his soul to a demon but changed his mind at the last moment. Now the demon refuses to leave. Since I do not have a soul, I might just as well trade with demon instead of Lavaes.~
+/* DONE */ @10018 = ~The Sellswords.
+
+I traded my "soul" with the demon and received my reward. Lavaes is free now.~
+@10019 = ~The Sellswords.
+
+I found the Black Arena, a place where drow fighters test their mettle against other warriors, golems and the undead. No party has completed the full triad of trials yet. I may be the first.~
+/* DONE */ @10020 = ~The Sellswords.
+
+I fought at the Black Arena three times and received my final reward. The trials are over.~
+@10021 = ~The Sellswords.
+
+The Matron Mother appeared before us and accused Kimmuriel of treachery. To prove ourselves, we must kill her treacherous son, Lorn Jeven, a prospective Bregan D'aerthe candidate. Kimmuriel does not want to assassinate him, but we have little choice.~
+@10022 = ~The Sellswords.
+
+Kimmuriel managed to transform another warrior into the identical likeness of Lorn Jeven and coldly severed the warrior's head. It will suffice as proof. Now I must meet Artemis Entreri near the first barrier to the Matron's palace. Entreri will tell me who has the first wardstone.~
+@10023 = ~The Sellswords.
+
+Artemis Entreri told me that I may find the first wardstone in possession of the Matron Mother's most trusted advisor, Jey'Re Jeven. He is in the lust chambers now, and I shall probably have to kill him. Afterwards I must hurry to the palace, so I should finish any tasks before searching for Jey'Re.~
+@10024 = ~The Sellswords.
+
+I have all three wardstones. The only way is forward, towards the Matron Mother's palace and Jarlaxle.~
+/* DONE */ @10025 = ~The Sellswords.
+
+I am finally back from Menzoberranzan. Matron Mother Jeven was killed, and Kimmuriel and Artemis Entreri freed Jarlaxle from his stone state. I was rewarded with the contents of the treasury.~
+/* DONE */ @10026 = ~The Sellswords.
+
+I attacked when I should not have, and was returned to Athkatla without explanation. This adventure is over.~
+
+/* MAP NOTES */
+
+@100000 = ~Tavern~
+@100001 = ~Lust Chambers~
+@100002 = ~First Barrier~
+@100003 = ~Second Barrier~
+@100004 = ~Matron Mother's Palace~
+@100005 = ~Black Arena~
+@100006 = ~Lavaes' House~
+@100007 = ~Duergar Embassy~
+@100008 = ~Marketplace~

@@ -1,0 +1,304 @@
+// Main area
+IF
+Global("O#LLSpawnO#L001","GLOBAL",0)
+THEN
+RESPONSE #100
+Explore()
+CreateCreature("O#LLCapt",[1173.1449],11)
+CreateCreature("O#LLKOB1",[1578.881],0)
+CreateCreature("O#LLKOB2",[1269.1438],0)
+CreateCreature("O#LLKOB3",[2493.1555],0)
+CreateCreature("O#LLMAN1",[1573.1540],0)
+CreateCreature("O#LLMAN2",[1048.1439],13)
+CreateCreature("O#LLMAN3",[1983.781],0)
+CreateCreature("O#LLMAN4",[1476.580],13)
+CreateCreature("O#LLMAN5",[1244.447],0)
+CreateCreature("O#LLMAN6",[2355.1667],6)
+CreateCreature("O#LLWOM1",[1093.1485],10)
+CreateCreature("O#LLWOM2",[1785.1411],4)
+CreateCreature("O#LLWOM3",[2065.1382],0)
+CreateCreature("O#LLWOM4",[2246.1919],5)
+CreateCreature("O#LLWOM5",[948.856],0)
+CreateCreature("O#LLWOM6",[1294.1790],11) 
+CreateCreature("O#LLSPI1",[1329.448],0)
+CreateCreature("O#LLSPI2",[1303.890],0)
+CreateCreature("O#LLSPI3",[2520.1067],0)
+CreateCreature("O#LLSPI4",[1482.1592],0)
+CreateCreature("O#LLMERA",[1352.777],0)
+CreateCreature("O#LLMERP",[1251.871],0)
+CreateCreature("O#LLMERS",[1311.979],0)
+CreateCreature("O#LLMERW",[1454.990],0)
+CreateCreature("O#LLRIEL",[2200.1500],4)
+CreateCreature("O#LLKOBA",[2589.1274],4)
+CreateCreature("O#LLDUER",[2656.1277],4)
+CreateCreature("O#LLDUE1",[2571.1350],8)
+CreateCreature("O#LLDUE2",[2637.1331],6)
+CreateCreature("O#LLZEDE",[1820.1365],10)
+CreateCreature("O#LLZEDM",[1859.1340],2)
+CreateCreature("O#LLGirl",[2087.920],0)
+SetGlobal("O#LLSpawnO#L001","GLOBAL",1)
+END
+
+// Failsafe: return to Athkatla
+IF
+Global("O#LLReturnHome","GLOBAL",0)
+OR(3)
+Global("O#LLReturnHomeArte","GLOBAL",1)
+Global("O#LLReturnHomeKimm","GLOBAL",1)
+Dead("O#LLLORN")
+THEN
+RESPONSE #100
+SetGlobal("O#LLQuest","GLOBAL",1000)
+EraseJournalEntry(@10002)
+EraseJournalEntry(@10003)
+EraseJournalEntry(@10004)
+EraseJournalEntry(@10005)
+EraseJournalEntry(@10006)
+EraseJournalEntry(@10007)
+EraseJournalEntry(@10008)
+EraseJournalEntry(@10010)
+EraseJournalEntry(@10011)
+EraseJournalEntry(@10012)
+EraseJournalEntry(@10015)
+EraseJournalEntry(@10017)
+EraseJournalEntry(@10019)
+EraseJournalEntry(@10021)
+EraseJournalEntry(@10022)
+EraseJournalEntry(@10023)
+EraseJournalEntry(@10024)
+AddJournalEntry(@10026,QUEST_DONE)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("O#LLCut1")
+END
+
+// Lorn
+IF
+Global("O#LLQuest","GLOBAL",20)
+Global("O#LLSpawnO#L001Lorn","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLLORN",[2424.1175],0)
+SetGlobal("O#LLSpawnO#L001Lorn","GLOBAL",1)
+END
+
+// Fighters, captain
+IF
+Global("O#LLQuest","GLOBAL",12)
+Global("O#LLFIG1","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLFIG1",[2418.1111],0)
+CreateCreature("O#LLFIG2",[2424.1175],8)
+CreateCreature("O#LLFIG3",[2484.1142],4)
+CreateCreature("O#LLFIG4",[2669.1035],3)
+CreateCreature("O#LLFIG5",[2271.1130],12)
+CreateCreature("O#LLFIG6",[2340.987],13)
+CreateCreature("O#LLFIGM",[2328.1320],10)
+SetGlobal("O#LLFIG1","GLOBAL",1)
+END
+
+// Rival spies, captain
+IF
+Global("O#LLQuest","GLOBAL",13)
+Global("O#LLQuestRivalSpiesSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLNELR",[1651.1426],0)
+CreateCreature("O#LLSPY1",[2027.818],0)
+CreateCreature("O#LLSPY2",[2338.1508],0)
+CreateCreature("O#LLSPY3",[1169.683],11)
+CreateCreature("O#LLSPY4",[1479.363],0)
+SetGlobal("O#LLQuestRivalSpiesSpawn","GLOBAL",1)
+END
+
+// Githyanki, Kimmuriel
+IF
+Global("O#LLKimmurielTasks","GLOBAL",1)
+THEN
+RESPONSE #100
+CreateCreature("O#LLGITH",[610.1314],0)
+CreateCreature("O#LLGIT2",[500.1320],0)
+CreateCreature("O#LLGIT3",[465.1373],0)
+CreateCreature("O#LLGIT4",[531.1406],0)
+GiveItemCreate("O#LW2","O#LLGIT2",1,0,0)
+SetGlobal("O#LLKimmurielTasks","GLOBAL",2)
+END
+
+// Illithids, Kimmuriel
+IF
+Global("O#LLKimmurielTasks","GLOBAL",4) 
+Global("O#LLQuestIllKimmSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLILL1",[2100.1780],0)
+CreateCreature("O#LLILL2",[2056.1778],0)
+SetGlobal("O#LLQuestIllKimmSpawn","GLOBAL",1)
+END
+
+IF
+Global("O#LLKimmurielTasks","GLOBAL",5) 
+Global("O#LLQuestGolKimmSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLGol1",[845.764],0)
+CreateCreature("O#LLGol2",[1010.759],0)
+CreateCreature("O#LLGol3",[1055.656],0)
+SetGlobal("O#LLQuestGolKimmSpawn","GLOBAL",1)
+END
+
+// Brown drow
+IF
+Global("O#LLPriestessBrown","GLOBAL",1)
+Global("O#LLPriestessBrownSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLBrow",[2028.1896],11)
+CreateCreature("O#LLBro2",[1982.1907],11)
+CreateCreature("O#LLUmb1",[1925.1875],11)
+CreateCreature("O#LLUmb2",[1975.1961],11)
+SetGlobal("O#LLPriestessBrownSpawn","GLOBAL",1)
+END
+
+// Rival house attack
+IF
+Global("O#LLQuest","GLOBAL",27)
+Global("O#LLQuestRivalAttackSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLRiv0",[1274.1583],0)
+CreateCreature("O#LLRiv1",[1296.1613],0)
+CreateCreature("O#LLRiv2",[2194.1500],0)
+CreateCreature("O#LLRiv3",[2245.1535],0)
+CreateCreature("O#LLRiv4",[2353.1074],0)
+CreateCreature("O#LLRiv5",[2315.1057],0)
+CreateCreature("O#LLRiv6",[2256.1054],0)
+CreateCreature("O#LLRiv7",[2240.986],0)
+CreateCreature("O#LLRiv8",[1572.709],0)
+CreateCreature("O#LLRiv9",[1551.774],0)
+ActionOverride("O#LLMERA",DestroySelf())
+ActionOverride("O#LLMERP",DestroySelf())
+ActionOverride("O#LLMERS",DestroySelf())
+ActionOverride("O#LLMERW",DestroySelf())
+ActionOverride("O#LLILL1",DestroySelf())
+ActionOverride("O#LLILL2",DestroySelf())
+SetGlobal("O#LLQuestRivalAttackSpawn","GLOBAL",1)
+END
+
+// Entreri
+IF
+Global("O#LLQuest","GLOBAL",23)
+THEN
+RESPONSE #100
+CreateCreature("O#LLARTE",[1450.350],0)
+SetGlobal("O#LLQuest","GLOBAL",24)
+END
+
+// Githyanki ambush
+IF
+Global("O#LLQuest","GLOBAL",25)
+Global("O#LLGithAmbush","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("O#LLGiw",[1900.228],0)
+CreateCreature("O#LLGiw1",[1848.234],0)
+CreateCreature("O#LLGiw2",[1873.183],0)
+CreateCreature("O#LLGiw3",[1973.235],0)
+CreateCreature("O#LLGiw4",[1964.313],0)
+SetGlobal("O#LLGithAmbush","GLOBAL",1)
+END
+
+// Initial state
+IF
+Global("DeactivateEntrances","O#L001",0)
+THEN
+RESPONSE #100
+TriggerActivation("O#L001W10",FALSE)
+TriggerActivation("O#L001W11",FALSE)
+TriggerActivation("O#L001W20",FALSE)
+TriggerActivation("O#L001W21",FALSE)
+TriggerActivation("O#L007",FALSE)
+TriggerActivation("InfoW10",TRUE)
+TriggerActivation("InfoW11",TRUE)
+TriggerActivation("InfoW20",TRUE)
+TriggerActivation("InfoW21",TRUE)
+TriggerActivation("InfoW07",TRUE)
+SetGlobal("DeactivateEntrances","O#L001",1)
+END
+
+// Passage 1
+IF
+Global("O#LLQuest","GLOBAL",27)
+PartyHasItem("O#LW1")
+Global("OpenFirstPassage","O#L001",0)
+THEN
+RESPONSE #100
+TriggerActivation("O#L001W10",TRUE)
+TriggerActivation("O#L001W11",TRUE)
+TriggerActivation("InfoW10",FALSE)
+TriggerActivation("InfoW11",FALSE)
+SetGlobal("OpenFirstPassage","O#L001",1)
+END
+
+IF
+Global("O#LLQuest","GLOBAL",27)
+!PartyHasItem("O#LW1")
+Global("OpenFirstPassage","O#L001",1)
+THEN
+RESPONSE #100
+TriggerActivation("O#L001W10",FALSE)
+TriggerActivation("O#L001W11",FALSE)
+TriggerActivation("InfoW10",TRUE)
+TriggerActivation("InfoW11",TRUE)
+SetGlobal("OpenFirstPassage","O#L001",0)
+END
+
+// Passage 2
+IF
+Global("O#LLQuest","GLOBAL",27)
+PartyHasItem("O#LW2")
+Global("Open2ndPassage","O#L001",0)
+THEN
+RESPONSE #100
+TriggerActivation("O#L001W20",TRUE)
+TriggerActivation("O#L001W21",TRUE)
+TriggerActivation("InfoW20",FALSE)
+TriggerActivation("InfoW21",FALSE)
+SetGlobal("Open2ndPassage","O#L001",1)
+END
+
+IF
+Global("O#LLQuest","GLOBAL",27)
+!PartyHasItem("O#LW2")
+Global("Open2ndPassage","O#L001",1)
+THEN
+RESPONSE #100
+TriggerActivation("O#L001W20",FALSE)
+TriggerActivation("O#L001W21",FALSE)
+TriggerActivation("InfoW20",TRUE)
+TriggerActivation("InfoW21",TRUE)
+SetGlobal("Open2ndPassage","O#L001",0)
+END
+
+// Passage 3 (palace)
+IF
+Global("O#LLQuest","GLOBAL",27)
+PartyHasItem("O#LW3")
+Global("Open3rdPassage","O#L001",0)
+THEN
+RESPONSE #100
+TriggerActivation("O#L007",TRUE)
+TriggerActivation("InfoW07",FALSE)
+SetGlobal("Open3rdPassage","O#L001",1)
+END
+
+IF
+Global("O#LLQuest","GLOBAL",27)
+!PartyHasItem("O#LW3")
+Global("Open3rdPassage","O#L001",1)
+THEN
+RESPONSE #100
+TriggerActivation("O#L007",FALSE)
+TriggerActivation("InfoW07",TRUE)
+SetGlobal("Open3rdPassage","O#L001",0)
+END

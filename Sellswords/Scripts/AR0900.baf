@@ -1,0 +1,838 @@
+// Athkatla: Temple District, destroying the drow items
+IF
+OR(2)
+Global("O#LLQuest","GLOBAL",1000)
+Global("O#LLQuest","GLOBAL",100)
+Global("O#LLDrowItemCheck","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#LLDrowItemCheck","GLOBAL",1)
+MultiPlayerSync()
+SetInterrupt(FALSE)
+Wait(1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN02",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN02",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN02",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN02",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN02",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN02",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN02",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN02",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN02",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN02",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCHAN02",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCHAN02",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H02",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H02",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H02",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H02",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H02",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H02",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H02",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H02",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H02",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H02",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSW1H02",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSW1H02",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBLUN01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBLUN01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBLUN01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBLUN01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBLUN01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBLUN01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBLUN01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBLUN01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBLUN01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBLUN01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBLUN01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBLUN01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWHALB01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWHALB01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWHALB01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWHALB01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWHALB01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWHALB01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWHALB01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWHALB01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWHALB01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWHALB01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWHALB01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWHALB01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSPER01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSPER01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSPER01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSPER01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSPER01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSPER01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSPER01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSPER01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSPER01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSPER01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSPER01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSPER01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWXBOW01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWXBOW01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWXBOW01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWXBOW01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWXBOW01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWXBOW01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWXBOW01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWXBOW01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWXBOW01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWXBOW01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWXBOW01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWXBOW01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSHLD01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSHLD01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSHLD01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSHLD01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSHLD01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSHLD01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSHLD01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSHLD01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSHLD01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSHLD01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWSHLD01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWSHLD01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCLCK01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCLCK01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCLCK01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCLCK01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCLCK01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCLCK01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCLCK01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCLCK01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCLCK01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCLCK01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWCLCK01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWCLCK01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT02",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT02",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT02",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT02",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT02",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT02",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT02",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT02",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT02",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT02",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT02",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT02",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT03",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT03",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT03",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT03",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT03",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT03",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT03",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT03",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT03",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT03",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWBOLT03",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWBOLT03",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWPLAT01",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWPLAT01",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWPLAT01",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWPLAT01",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWPLAT01",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWPLAT01",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWPLAT01",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWPLAT01",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWPLAT01",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWPLAT01",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("DWPLAT01",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","DWPLAT01",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("MISC9W",Player1)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","MISC9W",Player1)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("MISC9W",Player2)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","MISC9W",Player2)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("MISC9W",Player3)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","MISC9W",Player3)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("MISC9W",Player4)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","MISC9W",Player4)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("MISC9W",Player5)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","MISC9W",Player5)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+HasItem("MISC9W",Player6)
+THEN
+RESPONSE #100
+TakeItemReplace("DWDUST","MISC9W",Player6)
+Continue()
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+THEN
+RESPONSE #100
+SetInterrupt(TRUE)
+END
+
+IF
+Global("O#LLDrowItemCheck","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("O#LLDrowItemCheck","GLOBAL",2)
+END

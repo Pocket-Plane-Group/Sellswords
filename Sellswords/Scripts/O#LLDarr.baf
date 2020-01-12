@@ -1,0 +1,19 @@
+IF
+OR(3)
+Global("O#LLBlackArena","GLOBAL",2)
+Global("O#LLBlackArena","GLOBAL",4)
+Global("O#LLBlackArena","GLOBAL",6)
+OR(6)
+Range(Player1,30)
+Range(Player2,30)
+Range(Player3,30)
+Range(Player4,30)
+Range(Player5,30)
+Range(Player6,30)
+InMyArea(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END

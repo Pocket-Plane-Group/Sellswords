@@ -1,0 +1,8 @@
+IF
+Clicked([0])
+Range(Lasttrigger,4000)
+Global("Info10","O#L001",0)
+THEN
+RESPONSE #100
+DisplayStringHead(Myself,@2)
+END

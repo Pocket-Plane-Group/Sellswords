@@ -1,0 +1,16 @@
+IF
+AttackedBy([GOODCUTOFF],DEFAULT)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+SetGlobal("O#LLKimmurielGithAttack","GLOBAL",1)
+Enemy()
+END
+
+IF
+Global("O#LLKimmurielGithAttack","GLOBAL",1)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+Enemy()
+END

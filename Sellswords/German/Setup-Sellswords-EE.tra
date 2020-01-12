@@ -1,0 +1,47 @@
+@103 = ~Dieser Krummsäbelt riecht nach uralter Vergeltung und ist offensichtlich blutdürstig. Jeder, der wahrlich guten Herzens ist, sollte nicht daran denken ihn zu führen.
+
+EIGENSCHAFTEN:
+
+Regeneration: 1 Trefferpunkt alle 6 Sekunden
+Stärke: +1
+
+ETW0-Bonus: -4
+Schaden: 1W8 +4 (Klinge)
+Schadensbonus: +1W4 (Feuer)
+Initiativefaktor: 2
+Fertigkeit: Krummsäbel/Wakizashi/Ninjato
+Type: 1-händig
+Mindeststärke: 8
+
+Gewicht: 4
+~
+@119 = ~Diese leichte Kettenrüstung riecht nach Blut. Ihre vorherige Eigentümerin hatte vor kurzer Zeit ihr unschönes Ableben. Offensichtlich von einen Drow hergestellt, emittiert das Kettenhemd eine seltsame, fremde Aura. Es ist dennoch sehr stark und gut gearbeitet und nützt seinem neuen Eigentümer wahrscheinlich sehr.
+
+EIGENSCHAFTEN:
+
+Geschicklichkeit: +1
+
+Rüstungsklasse: 2
+Mindeststärke: 5
+
+Gewicht: 7~
+@121 = ~Dieser Zauberstab ist zart und schlank, aber er verbirgt den puren Tod in sich. Jede Ladung gibt einen Energiebolzen frei, der sogar den stärksten Feind sofort töten kann.
+
+EIGENSCHAFTEN:
+
+Tötet das Ziel, es sei denn, es erfolgt ein erfolgreicher Rettungswurf gegen Zauberstäbe, der mit -2 erschwert ist.
+
+  Reichweite: 30 Meter
+  Wirkungsbereich: 1 Kreatur
+
+Mindestintelligenz: 9
+
+Gewicht: 1~
+@123 = ~Gerüchte besagen, dass diese Armschienen einst Dinin Do'Urden gehörten, der Bruder von Drizzt und ein Söldner der Bregan D'aerthe. Er wurde von seiner Schwester Vierna in eine Drinne verwandelt und später bei einem Überfall auf den Zwergenkönig Bruenor Schlachtenhammer getötet.
+
+EIGENSCHAFTEN:
+
+Stärke: auf 19 gesetzt
+
+Gewicht: 2
+~

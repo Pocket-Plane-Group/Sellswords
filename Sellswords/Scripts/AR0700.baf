@@ -1,0 +1,15 @@
+// Athkatla: the Promenade, meeting the frightened boy
+IF
+AreaCheck("AR0700")
+AreaType(OUTDOOR)
+InMyArea(Player1)
+Global("O#LLFirstBoySpawn","GLOBAL",0)
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
+CombatCounter(0)
+THEN
+RESPONSE #100
+Explore()
+CreateCreatureObjectOffset("O#LLBoy",Player1,[20.20])
+SetGlobal("O#LLFirstBoySpawn","GLOBAL",1)
+Continue()
+END

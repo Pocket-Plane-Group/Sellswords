@@ -1,0 +1,68 @@
+// Lust chambers
+IF
+Global("O#LLSpawnO#L005","GLOBAL",0)
+THEN
+RESPONSE #100
+Explore()
+CreateCreature("O#LLLUM1",[866.852],0)
+CreateCreature("O#LLLUM2",[541.1043],12)
+CreateCreature("O#LLLUW1",[851.1118],8)
+CreateCreature("O#LLLUW2",[1065.552],0)
+CreateCreature("O#LLSEXM",[637.666],0)
+CreateCreature("O#LLSEXW",[353.852],12)
+CreateCreature("O#LLMERE",[832.975],2)
+CreateCreature("O#LLPRI2",[780.1025],11)
+SetGlobal("O#LLSpawnO#L005","GLOBAL",1)
+END
+
+IF
+GlobalGT("O#LLQuest","GLOBAL",24)
+Global("O#LLSpawnO#L005","GLOBAL",1)
+THEN
+RESPONSE #100
+ActionOverride("O#LLLUM1",DestroySelf())
+ActionOverride("O#LLLUM2",DestroySelf())
+ActionOverride("O#LLLUW1",DestroySelf())
+ActionOverride("O#LLLUW2",DestroySelf())
+ActionOverride("O#LLSEXM",DestroySelf())
+ActionOverride("O#LLSEXW",DestroySelf())
+ActionOverride("O#LLMERE",DestroySelf())
+ActionOverride("O#LLPRI2",DestroySelf())
+SetGlobal("O#LLSpawnO#L005","GLOBAL",2)
+END
+
+// Jey'Re Jeven
+IF
+Global("O#LLQuest","GLOBAL",25)
+THEN
+RESPONSE #100
+CreateCreature("O#LLJey",[786.967],0)
+GiveItemCreate("O#LW1","O#LLJey",1,0,0)
+GiveItemCreate("MISC44","O#LLJey",2,0,0)
+SetGlobal("O#LLQuest","GLOBAL",26)
+END
+
+IF
+Global("O#LLQuest","GLOBAL",27)
+Global("O#LLSpawnO#L005","GLOBAL",2)
+THEN
+RESPONSE #100
+CreateCreature("O#LLJey1",[522.1149],0)
+CreateCreature("O#LLJey2",[552.1174],0)
+CreateCreature("O#LLJey3",[602.1168],0)
+CreateCreature("O#LLIlJ1",[553.951],0)
+CreateCreature("O#LLIlJ2",[671.851],0)
+SetGlobal("O#LLSpawnO#L005","GLOBAL",3)
+END
+
+IF
+Global("O#LLQuest","GLOBAL",27)
+Global("O#LLPlayerHas3Wardstones","GLOBAL",0)
+PartyHasItem("O#LW1")
+PartyHasItem("O#LW2")
+PartyHasItem("O#LW3")
+THEN
+RESPONSE #100
+AddJournalEntry(@10024,QUEST)
+SetGlobal("O#LLPlayerHas3Wardstones","GLOBAL",1)
+END

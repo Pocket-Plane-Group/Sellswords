@@ -1,0 +1,54 @@
+@103 = ~This scimitar reeks of some long-dead vengeance and is obviously hungry for blood. Too hungry for anyone truly good at heart to even consider wielding it.
+
+STATISTICS:
+
+Equipped abilities:
+- Regenerate 1 Hit Point every 6 seconds
+- Strength: +1
+
+THAC0: +4
+Damage: 1d8+4, +1d4 fire damage
+Damage type: Slashing
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninjato
+Type: One-handed
+Requires:
+ 8 Strength
+
+Weight: 4~
+@119 = ~This light mail smells of blood. Its previous owner had likely met his untimely end not long ago. Obviously of drow make, the chainmail emits a strange aura of foreboding. It is strong and well-crafted, however, and will likely serve its new owner well.
+
+STATISTICS:
+
+Equipped abilities:
+- Dexterity: +1
+
+Armor Class: 2
+Requires: 
+ 5 Strength
+
+Weight: 7
+~
+@121 = ~This wand is delicate and slender, but it conceals pure death within. Each charge releases a bolt of energy that can instantly kill even the strongest enemy.
+
+STATISTICS:
+
+Charge abilities:
+- Kill target (unless Save vs. Wand with -2 penalty)
+  Range:  100 ft.
+  Area of Effect: 1 creature
+
+Requires:
+ 9 Intelligence
+
+Weight: 1
+~
+@123 = ~The rumor goes that these hands once belonged to Dinin Do'Urden, Drizzt's brother and a mercenary of Bregan D'aerthe. He was turned into a drider by his sister Vierna and later killed in a raid against the dwarven king Bruenor Battlehammer.
+
+STATISTICS:
+
+Equipped abilities:
+– Strength: 19
+
+Weight:  2
+~

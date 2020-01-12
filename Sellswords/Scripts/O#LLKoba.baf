@@ -1,0 +1,10 @@
+IF
+Detect([PC])
+Global("O#LLKobaSaysHello","LOCALS",0)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+DisplayStringHead(Myself,@1026)
+Wait(3)
+SetGlobal("O#LLKobaSaysHello","LOCALS",1)
+END

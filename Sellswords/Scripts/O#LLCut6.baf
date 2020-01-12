@@ -1,0 +1,13 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+Wait(1)
+MoveViewObject(Player1,INSTANT)
+CreateCreature("O#LLKIMM",[2405.1505],8)
+Wait(1)
+ActionOverride("O#LLKIMM",MoveToPoint([2429.1287]))
+Wait(3)
+ActionOverride("O#LLKIMM",StartDialogueNoSet(Player1))
+END

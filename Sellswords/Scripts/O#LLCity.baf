@@ -1,0 +1,42 @@
+IF
+Detect([PC])
+Global("O#LLQuestRivalAttackSpawn","GLOBAL",1)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+RunAwayFrom(LastSeenBy(Myself),30)
+END
+
+IF
+Allegiance(Myself,ENEMY)
+Global("O#LLDrowCityHostileMe","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("O#LLDrowCityHostileMe","LOCALS",1)
+IncrementGlobal("O#LLDrowCityHostile","GLOBAL",1)
+END
+
+IF
+AttackedBy([GOODCUTOFF],DEFAULT)
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+Enemy()
+END
+
+IF
+See(NearestEnemyOf(Myself))
+Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+AttackedBy([ANYONE],DEFAULT)
+Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+Attack(LastAttackerOf(Myself))
+END
+

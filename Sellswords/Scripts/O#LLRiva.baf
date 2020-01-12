@@ -1,0 +1,21 @@
+IF
+See([PC])
+Global("init1","LOCALS",0)
+THEN
+RESPONSE #25
+DisplayStringHead(Myself,@1002)
+SetGlobal("init1","LOCALS",1)
+AttackReevaluate(NearestEnemyOf(Myself),15)
+RESPONSE #25
+DisplayStringHead(Myself,@1003)
+SetGlobal("init1","LOCALS",1)
+AttackReevaluate(NearestEnemyOf(Myself),15)
+RESPONSE #25
+DisplayStringHead(Myself,@1004)
+SetGlobal("init1","LOCALS",1)
+AttackReevaluate(NearestEnemyOf(Myself),15)
+RESPONSE #25
+DisplayStringHead(Myself,@1005)
+SetGlobal("init1","LOCALS",1)
+AttackReevaluate(NearestEnemyOf(Myself),15)
+END

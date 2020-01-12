@@ -1,0 +1,11 @@
+// Palace, first chamber
+IF
+Global("O#LLSpawnO#L007","GLOBAL",0)
+THEN
+RESPONSE #100
+Explore()
+CreateCreature("O#LLPRIE",[867.842],2)
+CreateCreature("O#LLORB1",[600.542],13)
+CreateCreature("O#LLORB2",[1206.964],4)
+SetGlobal("O#LLSpawnO#L007","GLOBAL",1)
+END

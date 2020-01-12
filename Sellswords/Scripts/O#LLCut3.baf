@@ -1,0 +1,20 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+StorePartyLocations()
+Wait(1)
+FadeToColor([20.0],0)
+Wait(1)
+ActionOverride("O#LLCAPT",MoveBetweenAreas("AR2204",[571.641],0))
+LeaveAreaLUAPanic("AR2204","",[573.672],8)
+LeaveAreaLUA("AR2204","",[573.672],8)
+MultiPlayerSync()
+Explore()
+Wait(1)
+FadeFromColor([20.0],0)
+MoveViewObject(Player1,INSTANT)
+Wait(1)
+ActionOverride("O#LLCAPT",StartDialogueNoSet(Player1))
+END

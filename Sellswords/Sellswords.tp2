@@ -1,0 +1,1583 @@
+BACKUP ~Sellswords/Backup~
+AUTHOR ~http://forums.pocketplane.net~
+VERSION ~v7~
+
+README ~Sellswords/%LANGUAGE%/Readme-Sellswords.txt~ ~Sellswords/Readme-Sellswords.txt~ 
+
+ALWAYS
+  ACTION_IF NOT VARIABLE_IS_SET bg2_chapter BEGIN
+    ACTION_IF GAME_IS ~eet~ BEGIN
+      OUTER_SET bg2_chapter = 12
+    END ELSE BEGIN
+      OUTER_SET bg2_chapter = 0
+    END
+    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+      OUTER_SET bg2_chapter = bg2_chapter + 1
+      OUTER_SPRINT name_source ~bg2_chapter_%i%~
+      OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+    END
+  END
+
+
+  // Only setup-Mod.tra needs to be reloaded
+  ACTION_DEFINE_ARRAY O#reload BEGIN Setup-Sellswords END
+
+  // There is no "language" folder so the root of all languages in %MOD_FOLDER%
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charsets = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%~
+      reload_array = O#reload
+  END
+END
+
+AUTO_TRA ~Sellswords/%s~
+
+LANGUAGE ~English~ ~English~ ~Sellswords/English/Setup-Sellswords.tra~
+LANGUAGE ~Russian~ ~Russian~ ~Sellswords/Russian/Setup-Sellswords.tra~
+LANGUAGE ~German (by Gerri)~ ~German~ ~Sellswords/German/Setup-Sellswords.tra~
+LANGUAGE ~Chinese (by Merzbau)~ ~Schinese~ ~Sellswords/Schinese/Setup-Sellswords.tra~
+
+BEGIN @0
+
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @1
+
+// Areas
+
+COPY ~Sellswords/Areas~ ~override~
+ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
+  COPY ~Sellswords/pvrz~ ~Override~
+END
+ELSE BEGIN
+  COPY ~Sellswords/tis_v1~ ~Override~
+END
+
+COPY_EXISTING ~AM2200.wav~   ~override/O#2200.wav~
+	      ~AM2201.wav~   ~override/O#2201.wav~
+	      ~AM2202.wav~   ~override/O#2202.wav~
+	      ~AM2203.wav~   ~override/O#2203.wav~
+	      ~AM2204.wav~   ~override/O#2204.wav~
+
+ACTION_IF GAME_IS ~BG2EE eet~ BEGIN
+LOAD_TRA ~Sellswords/%LANGUAGE%/Setup-Sellswords-EE.tra~
+ADD_JOURNAL @9999 @10000 @10001
+ADD_JOURNAL @10002 @10003 @10004 @10005 @10006 @10007 @10008 @10009 @10010 @10011 @10012 @10013 @10014 @10015 @10016 @10017 @10018 @10019 @10020 @10021 @10022 @10023 @10024 @10025 @10026 
+COPY ~Sellswords/Portraits/O#LLARTE_EE.bmp~ ~override/O#LLARTE.bmp~
+COPY ~Sellswords/Portraits/O#LLJARL_EE.bmp~ ~override/O#LLJARL.bmp~
+COPY ~Sellswords/Portraits/O#LLKIMM_EE.bmp~ ~override/O#LLKIMM.bmp~
+COPY ~Sellswords/Portraits/O#LLMATR_EE.bmp~ ~override/O#LLMATR.bmp~
+COPY ~Sellswords/Areas/O#L001EE.MOS~ ~override/O#L001.MOS~
+COPY ~Sellswords/Areas/O#L001EE.MOS~ ~override/O#L007.MOS~
+COPY ~Sellswords/Areas/O#L001EE.MOS~ ~override/O#L009.MOS~
+END ELSE BEGIN
+COPY ~Sellswords/Portraits/O#LLARTE.bmp~ ~override/O#LLARTE.bmp~
+COPY ~Sellswords/Portraits/O#LLJARL.bmp~ ~override/O#LLJARL.bmp~
+COPY ~Sellswords/Portraits/O#LLKIMM.bmp~ ~override/O#LLKIMM.bmp~
+COPY ~Sellswords/Portraits/O#LLMATR.bmp~ ~override/O#LLMATR.bmp~
+END
+
+// CamDawg's custom state
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+// Dialogue and scripts
+
+COMPILE ~Sellswords/Dialogue/Sellswords.d~
+
+	~Sellswords/Scripts/O#LW07.baf~ 
+        ~Sellswords/Scripts/O#LW10.baf~ 
+        ~Sellswords/Scripts/O#LW11.baf~ 
+        ~Sellswords/Scripts/O#LW20.baf~ 
+        ~Sellswords/Scripts/O#LW21.baf~ 
+
+        ~Sellswords/Scripts/O#L001.baf~ // Main area
+
+        ~Sellswords/Scripts/O#L002.baf~ // First level: Black Arena
+        ~Sellswords/Scripts/O#L003.baf~ // Second level: Lavaes's house
+        ~Sellswords/Scripts/O#L004.baf~ // Third level: House of Shades
+
+        ~Sellswords/Scripts/O#L005.baf~ // Left entrance: lust chambers
+        ~Sellswords/Scripts/O#L006.baf~ // Right entrance: Kimmuriel/tavern
+
+        ~Sellswords/Scripts/O#L007.baf~ // Palace, first chamber
+        ~Sellswords/Scripts/O#L008.baf~ // Palace, second chamber
+        ~Sellswords/Scripts/O#L009.baf~ // Palace, treasury
+
+	~Sellswords/Scripts/O#LLCut1.baf~ // Going home
+	~Sellswords/Scripts/O#LLCut2.baf~
+	~Sellswords/Scripts/O#LLCut3.baf~
+	~Sellswords/Scripts/O#LLCut4.baf~
+	~Sellswords/Scripts/O#LLCut5.baf~
+	~Sellswords/Scripts/O#LLCut6.baf~
+	~Sellswords/Scripts/O#LLCut7.baf~
+	~Sellswords/Scripts/O#LLCut8.baf~
+	~Sellswords/Scripts/O#LLCut9.baf~
+
+	~Sellswords/Scripts/O#LLARTE.baf~
+	~Sellswords/Scripts/O#LLBOR.baf~
+	~Sellswords/Scripts/O#LLCITY.baf~
+	~Sellswords/Scripts/O#LLDARR.baf~
+	~Sellswords/Scripts/O#LLENEM.baf~
+	~Sellswords/Scripts/O#LLFIGH.baf~
+	~Sellswords/Scripts/O#LLGIRL.baf~
+	~Sellswords/Scripts/O#LLGIT2.baf~
+	~Sellswords/Scripts/O#LLGITH.baf~
+	~Sellswords/Scripts/O#LLJARL.baf~
+	~Sellswords/Scripts/O#LLKIMM.baf~
+	~Sellswords/Scripts/O#LLKOBA.baf~
+	~Sellswords/Scripts/O#LLMATR.baf~
+	~Sellswords/Scripts/O#LLMERE.baf~
+	~Sellswords/Scripts/O#LLPRIE.baf~
+	~Sellswords/Scripts/O#LLRIVA.baf~
+	~Sellswords/Scripts/O#LLSHAD.baf~
+	~Sellswords/Scripts/O#LLTALK.baf~
+	~Sellswords/Scripts/O#LLZEDE.baf~
+
+EXTEND_TOP ~AR0700.bcs~ ~Sellswords/Scripts/AR0700.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~AR0701.bcs~ ~Sellswords/Scripts/AR0701.baf~
+
+// Drow items
+EXTEND_BOTTOM ~AR0900.bcs~ ~Sellswords/Scripts/AR0900.baf~
+
+// Enge's shop, AR0707, is assigned AR0003.bcs in vanilla game. But someone might set it to AR0707.bcs, so we edit whichever script is available, thanks to Argent77 and K'aeloree:
+/* exclude AR0707.bcs not to patch it twice! */
+COPY_EXISTING ~ar0707.are~ ~override~
+READ_ASCII 0x94 ~ar0707_script~
+ACTION_IF NOT (~%ar0707_script%~ STRING_EQUAL_CASE ~AR0707~) BEGIN
+  EXTEND_TOP ~%ar0707_script%.bcs~ ~Sellswords/Scripts/AR0707.baf~ EVALUATE_BUFFER
+END
+/* this doesn't help us in case such a mod is installed after Sellswords, though, so we add this to AR0707.bcs just in case, too: */
+EXTEND_TOP ~AR0707.bcs~ ~Sellswords/Scripts/AR0707.baf~ EVALUATE_BUFFER
+
+
+// Map notes
+
+COPY_EXISTING ~O#L001.are~ ~override~ // Main area
+ADD_MAP_NOTE #1364 #1266 ~violet~   @100000
+ADD_MAP_NOTE #1133 #1367 ~darkblue~ @100001
+ADD_MAP_NOTE #1529 #291  ~blue~     @100002
+ADD_MAP_NOTE #2035 #383  ~blue~     @100003
+ADD_MAP_NOTE #2445 #541  ~blue~     @100004
+ADD_MAP_NOTE #1922 #1489 ~red~      @100005
+ADD_MAP_NOTE #1679 #1373 ~gray~     @100006
+ADD_MAP_NOTE #1912 #1261 ~orange~   @100007
+ADD_MAP_NOTE #1419 #870  ~green~    @100008
+BUT_ONLY_IF_IT_CHANGES
+
+// Characters
+
+COPY_EXISTING ~urchin3.cre~ ~override/O#LLBoy.cre~
+WRITE_ASCII 0x248 ~O#LLTalk~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLBoy~  #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLBoy~  #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~uddrow13.cre~ ~override/O#LLMess.cre~
+WRITE_ASCII 0x248 ~O#LLMess~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMess~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMess~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~DADROW9.cre~ ~override/O#LLKimm.cre~
+WRITE_ASCII 0x248 ~O#LLKimm~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLKimm~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLKimm~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_ASCII 0x34 ~O#LLKIMM~ #8	  // small portrait
+WRITE_BYTE 0x2c 30		  // Metal color
+WRITE_BYTE 0x2d 96 		  // Minor color
+WRITE_BYTE 0x2e 58 		  // Major color
+WRITE_BYTE 0x2f 83		  // Skin color
+WRITE_BYTE 0x30 21 		  // Leather color
+WRITE_BYTE 0x31 27 		  // Armor color
+WRITE_BYTE 0x32 79		  // Hair color
+SAY NAME1 @10
+SAY NAME2 @10
+
+COPY_EXISTING ~TROLGI02.cre~ ~override/O#LLTro1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTro1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTro1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~TROLGI02.cre~ ~override/O#LLTro2.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTro2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTro2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~TROLSI02.cre~ ~override/O#LLTro3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTro3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTro3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~TROLSI02.cre~ ~override/O#LLTro4.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTro4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTro4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~DADROW4.cre~ ~override/O#LLMatr.cre~
+WRITE_ASCII 0x248 ~O#LLMatr~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMatr~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMatr~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~pries18c~ #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_ASCII 0x34  ~O#LLMATR~ #8	  // small portrait
+WRITE_BYTE 0x2e 105 		  // Major color
+SAY NAME1 @11
+SAY NAME2 @11
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLCapt.cre~
+WRITE_ASCII 0x248 ~O#LLCapt~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLCapt~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLCapt~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x2d 57 		  // Minor color
+WRITE_BYTE 0x2e 18 		  // Major color
+SAY NAME1 @21
+SAY NAME2 @21
+
+COPY ~Sellswords/Characters/O#LLArte.cre~ ~override/O#LLArte.cre~
+WRITE_ASCII 0x248 ~O#LLArte~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLArte~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLArte~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_ASCII 0x34  ~O#LLARTE~ #8	  // small portrait
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLLorn.cre~
+WRITE_ASCII 0x248 ~O#LLLorn~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLLorn~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLLorn~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+SAY NAME1 @12
+SAY NAME2 @12
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLISTE.cre~
+WRITE_ASCII 0x248 ~O#LLISTE~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLISTE~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLISTE~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLJey.cre~
+WRITE_ASCII 0x248 ~O#LLTalk~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLJey~  #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLJey~  #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+SAY NAME1 @13
+SAY NAME2 @13
+
+COPY_EXISTING ~DAMIND1.cre~ ~override/O#LLILJ1.cre~
+WRITE_ASCII 0x248 ~O#LLILLJ~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLILLJ~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLILLJ~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x0270 255		  // Enemy
+
+COPY_EXISTING ~DAMIND1.cre~ ~override/O#LLILJ2.cre~
+WRITE_ASCII 0x248 ~O#LLILLJ~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLILLJ~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLILLJ~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x0270 255		  // Enemy
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLJey1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLJey1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLJey1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+WRITE_BYTE 0x0270 255		  // Enemy
+
+COPY_EXISTING ~DADROW5.cre~ ~override/O#LLJey2.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLJey2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLJey2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+WRITE_BYTE 0x0270 255		  // Enemy
+
+COPY_EXISTING ~DADROW5.cre~ ~override/O#LLJey3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLJey3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLJey3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+WRITE_BYTE 0x0270 255		  // Enemy
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGiw.cre~
+WRITE_ASCII 0x248 ~O#LLTalk~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGiw~  #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGiw~  #32  // death variable
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+WRITE_BYTE 0x2e 47 		  // Major color
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGiw1.cre~
+WRITE_ASCII 0x248 ~O#LLGiw1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGiw1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGiw1~ #32  // death variable
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGiw2.cre~
+WRITE_ASCII 0x248 ~O#LLGiw2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGiw2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGiw2~ #32  // death variable
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGiw3.cre~
+WRITE_ASCII 0x248 ~O#LLGiw3~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGiw3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGiw3~ #32  // death variable
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGiw4.cre~
+WRITE_ASCII 0x248 ~O#LLGiw4~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGiw4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGiw4~ #32  // death variable
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~DADROW4.cre~ ~override/O#LLPrie.cre~
+WRITE_ASCII 0x248 ~O#LLPrie~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLPrie~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLPrie~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~pries18d~ #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~BEHELD01.cre~ ~override/O#LLOrb1.cre~
+WRITE_ASCII 0x248 ~O#LLOrb1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLOrb1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLOrb1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~BEHELD01.cre~ ~override/O#LLOrb2.cre~
+WRITE_ASCII 0x248 ~O#LLOrb2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLOrb2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLOrb2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~ELEARG01.cre~ ~override/O#LLGua1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGua1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGua1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~ELEARG01.cre~ ~override/O#LLGua2.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGua2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGua2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLGua3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGua3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGua3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLGua4.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGua4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGua4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~GORTAN3.cre~ ~override/O#LLGua5.cre~
+WRITE_ASCII 0x248 ~O#LLGua5~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGua5~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGua5~ #32  // death variable
+
+COPY_EXISTING ~GORTAN4.cre~ ~override/O#LLGua6.cre~
+WRITE_ASCII 0x248 ~O#LLGua6~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGua6~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGua6~ #32  // death variable
+
+COPY_EXISTING ~Jarlaxle.cre~ ~override/O#LLJarl.cre~
+WRITE_ASCII 0x248 ~O#LLJarl~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLJarl~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLJarl~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_ASCII 0x34  ~O#LLJARL~ #8	  // small portrait
+WRITE_LONG 0x20 (THIS | 0x80)     // STATE_STONE_DEATH
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLFIG1.cre~
+WRITE_ASCII 0x248 ~O#LLFIG1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLFIG1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLFIG1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+SAY NAME1 @14
+SAY NAME2 @14
+
+COPY_EXISTING ~DADROW5.cre~ ~override/O#LLFIG2.cre~
+WRITE_ASCII 0x248 ~O#LLFIG2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLFIG2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLFIG2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+SAY NAME1 @15
+SAY NAME2 @15
+
+COPY_EXISTING ~DADROW6.cre~ ~override/O#LLFIG3.cre~
+WRITE_ASCII 0x248 ~O#LLFIG3~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLFIG3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLFIG3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+SAY NAME1 @16
+SAY NAME2 @16
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLFIG4.cre~
+WRITE_ASCII 0x248 ~O#LLFIG4~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLFIG4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLFIG4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~DADROW5.cre~ ~override/O#LLFIG5.cre~
+WRITE_ASCII 0x248 ~O#LLFIG5~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLFIG5~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLFIG5~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLFIG6.cre~
+WRITE_ASCII 0x248 ~O#LLFIG6~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLFIG6~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLFIG6~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UDDROW34.cre~ ~override/O#LLFIGM.cre~
+WRITE_ASCII 0x248 ~O#LLFIGM~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLFIGM~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLFIGM~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+SAY NAME1 @17
+SAY NAME2 @17
+
+COPY_EXISTING ~UDDROW11.cre~ ~override/O#LLNELR.cre~
+WRITE_ASCII 0x248 ~O#LLNELR~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLNELR~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLNELR~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x2d 61 		  // Minor color
+WRITE_BYTE 0x2e 47 		  // Major color
+SAY NAME1 @18
+SAY NAME2 @18
+
+COPY_EXISTING ~UDDROW12.cre~ ~override/O#LLSPY1.cre~
+WRITE_ASCII 0x248 ~O#LLSPY1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSPY1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSPY1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x2d 70 		  // Minor color
+WRITE_BYTE 0x2e 46 		  // Major color
+
+COPY_EXISTING ~UDDROW11.cre~ ~override/O#LLSPY2.cre~
+WRITE_ASCII 0x248 ~O#LLSPY2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSPY2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSPY2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x2d 46 		  // Minor color
+WRITE_BYTE 0x2e 63 		  // Major color
+
+COPY_EXISTING ~UDDROW12.cre~ ~override/O#LLSPY3.cre~
+WRITE_ASCII 0x248 ~O#LLSPY3~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSPY3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSPY3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x2d 101 		  // Minor color
+WRITE_BYTE 0x2e 47 		  // Major color
+
+COPY_EXISTING ~UDDROW34.cre~ ~override/O#LLSPY4.cre~
+WRITE_ASCII 0x248 ~O#LLSPY4~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSPY4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSPY4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x2d 80 		  // Minor color
+WRITE_BYTE 0x2e 46 		  // Major color
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGITH.cre~
+WRITE_ASCII 0x248 ~O#LLGITH~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGITH~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGITH~ #32  // death variable
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x2e 50 		  // Major color
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGIT2.cre~
+WRITE_ASCII 0x248 ~O#LLGIT2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGIT2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGIT2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGIT3.cre~
+WRITE_ASCII 0x248 ~O#LLGIT2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGIT3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGIT3~ #32  // death variable
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~GITH02.cre~ ~override/O#LLGIT4.cre~
+WRITE_ASCII 0x248 ~O#LLGIT2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGIT4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGIT4~ #32  // death variable
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~DAMIND1.cre~ ~override/O#LLILL1.cre~
+WRITE_ASCII 0x248 ~O#LLILL1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLILL1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLILL1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~DAMIND1.cre~ ~override/O#LLILL2.cre~
+WRITE_ASCII 0x248 ~O#LLILL2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLILL2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLILL2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UDGOLEM.cre~ ~override/O#LLGOL1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGOL1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGOL1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDGOLEM.cre~ ~override/O#LLGOL2.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGOL2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGOL2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDGOLEM.cre~ ~override/O#LLGOL3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGOL3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGOL3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~DADROW4.cre~ ~override/O#LLRIEL.cre~
+WRITE_ASCII 0x248 ~O#LLTALK~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIEL~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIEL~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~pries18d~ #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDDROW34.cre~ ~override/O#LLBROW.cre~
+WRITE_ASCII 0x248 ~O#LLBROW~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLBROW~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLBROW~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UDDROW37.cre~ ~override/O#LLBRO2.cre~
+WRITE_ASCII 0x248 ~O#LLBRO2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLBRO2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLBRO2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UMBHUL01.cre~ ~override/O#LLUMB1.cre~
+WRITE_ASCII 0x248 ~O#LLUMB1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLUMB1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLUMB1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~UMBHUL01.cre~ ~override/O#LLUMB2.cre~
+WRITE_ASCII 0x248 ~O#LLUMB2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLUMB2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLUMB2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+WRITE_BYTE 0x0270 128		  // Neutral
+
+COPY_EXISTING ~DUERGAR1.cre~ ~override/O#LLKOBA.cre~
+WRITE_ASCII 0x248 ~O#LLKOBA~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLKOBA~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLKOBA~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+SAY NAME1 @19
+SAY NAME2 @19
+
+COPY_EXISTING ~DUERGAR1.cre~ ~override/O#LLDUER.cre~
+WRITE_ASCII 0x248 ~O#LLDUER~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLDUER~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLDUER~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~DUERGAR2.cre~ ~override/O#LLDUE1.cre~
+WRITE_ASCII 0x248 ~O#LLDUE1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLDUE1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLDUE1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~DUERGAR3.cre~ ~override/O#LLDUE2.cre~
+WRITE_ASCII 0x248 ~O#LLDUE2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLDUE2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLDUE2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~SHADFI02.cre~ ~override/O#LLSHAD.cre~
+WRITE_ASCII 0x248 ~O#LLSHAD~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSHAD~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSHAD~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~O#LLEnem~ #8   // general script
+
+COPY_EXISTING ~SHADFI01.cre~ ~override/O#LLSHA1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSHA1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSHA1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~ 	     #8   // default script
+
+COPY_EXISTING ~SHADFI01.cre~ ~override/O#LLSHA2.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSHA2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSHA2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~ 	     #8   // default script
+
+COPY_EXISTING ~SHADFI01.cre~ ~override/O#LLSHA3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSHA3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSHA3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~ 	     #8   // default script
+
+COPY_EXISTING ~SHADFI01.cre~ ~override/O#LLSHA4.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSHA4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSHA4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~ 	     #8   // default script
+
+COPY_EXISTING ~SHADFI01.cre~ ~override/O#LLSHA5.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSHA5~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSHA5~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~ 	     #8   // default script
+
+COPY_EXISTING ~SHADFI01.cre~ ~override/O#LLSHA6.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSHA6~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSHA6~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~ 	     #8   // default script
+
+COPY_EXISTING ~DADROW9.cre~ ~override/O#LLLAVA.cre~
+WRITE_ASCII 0x248 ~O#LLLAVA~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLLAVA~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLLAVA~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+SAY NAME1 @20
+SAY NAME2 @20
+
+COPY_EXISTING ~PPDEMON.cre~ ~override/O#LLDEM.cre~
+WRITE_ASCII 0x248 ~O#LLDEM~  #8   // override
+WRITE_ASCII 0x2cc ~O#LLDEM~  #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLDEM~  #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLDARR.cre~
+WRITE_ASCII 0x248 ~O#LLDARR~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLDARR~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLDARR~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UDDROW27.cre~ ~override/O#LLARD1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARD1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARD1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW27.cre~ ~override/O#LLARD2.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARD2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARD2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW28.cre~ ~override/O#LLARD3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARD3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARD3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW28.cre~ ~override/O#LLARD4.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARD4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARD4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW29.cre~ ~override/O#LLARD5.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARD5~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARD5~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW29.cre~ ~override/O#LLARD6.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARD6~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARD6~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~MUMMY01.cre~ ~override/O#LLARU1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARU1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARU1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~MUMMY01.cre~ ~override/O#LLARU2.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARU2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARU2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~MUMMY01.cre~ ~override/O#LLARU3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARU3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARU3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~MUMMY01.cre~ ~override/O#LLARU4.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARU4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARU4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~MUMMY01.cre~ ~override/O#LLARU5.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARU5~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARU5~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~MUMMY01.cre~ ~override/O#LLARU6.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARU6~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARU6~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~GOLMAG01.cre~ ~override/O#LLARG1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARG1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARG1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~GOLMAG01.cre~ ~override/O#LLARG2.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARG2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARG2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~GOLMAG01.cre~ ~override/O#LLARG3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLARG3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLARG3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~DAKOBOLD.cre~ ~override/O#LLKOB1.cre~
+WRITE_ASCII 0x248 ~O#LLKOB1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLKOB1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLKOB1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~DAKOBOLD.cre~ ~override/O#LLKOB2.cre~
+WRITE_ASCII 0x248 ~O#LLKOB2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLKOB2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLKOB2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~DAKOBOLD.cre~ ~override/O#LLKOB3.cre~
+WRITE_ASCII 0x248 ~O#LLKOB3~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLKOB3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLKOB3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLMAN1.cre~
+WRITE_ASCII 0x248 ~O#LLMAN1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMAN1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMAN1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 55 		  // Minor color
+WRITE_BYTE 0x2e 56 		  // Major color
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLMAN2.cre~
+WRITE_ASCII 0x248 ~O#LLMAN2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMAN2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMAN2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 41 		  // Minor color
+WRITE_BYTE 0x2e 48 		  // Major color
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLMAN3.cre~
+WRITE_ASCII 0x248 ~O#LLMAN3~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMAN3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMAN3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 37 		  // Minor color
+WRITE_BYTE 0x2e 15 		  // Major color
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLMAN4.cre~
+WRITE_ASCII 0x248 ~O#LLMAN4~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMAN4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMAN4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 71 		  // Minor color
+WRITE_BYTE 0x2e 58 		  // Major color
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLMAN5.cre~
+WRITE_ASCII 0x248 ~O#LLMAN5~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMAN5~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMAN5~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 59 		  // Minor color
+WRITE_BYTE 0x2e 50 		  // Major color
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLMAN6.cre~
+WRITE_ASCII 0x248 ~O#LLMAN6~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMAN6~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMAN6~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 99 		  // Minor color
+WRITE_BYTE 0x2e 17 		  // Major color
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLWOM1.cre~
+WRITE_ASCII 0x248 ~O#LLWOM1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLWOM1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLWOM1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 86 		  // Minor color
+WRITE_BYTE 0x2e 52 		  // Major color
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLWOM2.cre~
+WRITE_ASCII 0x248 ~O#LLWOM2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLWOM2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLWOM2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 57 		  // Minor color
+WRITE_BYTE 0x2e 58 		  // Major color
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLWOM3.cre~
+WRITE_ASCII 0x248 ~O#LLWOM3~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLWOM3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLWOM3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 20 		  // Minor color
+WRITE_BYTE 0x2e 26 		  // Major color
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLWOM4.cre~
+WRITE_ASCII 0x248 ~O#LLWOM4~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLWOM4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLWOM4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 50 		  // Minor color
+WRITE_BYTE 0x2e 51 		  // Major color
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLWOM5.cre~
+WRITE_ASCII 0x248 ~O#LLWOM5~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLWOM5~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLWOM5~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 55 		  // Minor color
+WRITE_BYTE 0x2e 26 		  // Major color
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLWOM6.cre~
+WRITE_ASCII 0x248 ~O#LLWOM6~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLWOM6~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLWOM6~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 36 		  // Minor color
+WRITE_BYTE 0x2e 37 		  // Major color
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLTAM1.cre~
+WRITE_ASCII 0x248 ~O#LLTAM1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTAM1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTAM1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLTAM2.cre~
+WRITE_ASCII 0x248 ~O#LLTAM2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTAM2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTAM2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLTAW1.cre~
+WRITE_ASCII 0x248 ~O#LLTAW1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTAW1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTAW1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLTAW2.cre~
+WRITE_ASCII 0x248 ~O#LLTAW2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTAW2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTAW2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLLUM1.cre~
+WRITE_ASCII 0x248 ~O#LLLUM1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLLUM1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLLUM1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLLUM2.cre~
+WRITE_ASCII 0x248 ~O#LLLUM2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLLUM2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLLUM2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLLUW1.cre~
+WRITE_ASCII 0x248 ~O#LLLUW1~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLLUW1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLLUW1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDCOM02.cre~ ~override/O#LLLUW2.cre~
+WRITE_ASCII 0x248 ~O#LLLUW2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLLUW2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLLUW2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~DADROW21.cre~ ~override/O#LLSEXM.cre~
+WRITE_ASCII 0x248 ~O#LLSEXM~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSEXM~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSEXM~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~DADROW22.cre~ ~override/O#LLSEXW.cre~
+WRITE_ASCII 0x248 ~O#LLSEXW~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSEXW~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSEXW~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDDROW22.cre~ ~override/O#LLTAV.cre~
+WRITE_ASCII 0x248 ~O#LLTAV~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLTAV~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLTAV~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~UDDROW24.cre~ ~override/O#LLMERA.cre~
+WRITE_ASCII 0x248 ~O#LLMERA~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMERA~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMERA~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 21 		  // Minor color
+WRITE_BYTE 0x2e 28 		  // Major color
+
+COPY_EXISTING ~UDDROW23.cre~ ~override/O#LLMERP.cre~
+WRITE_ASCII 0x248 ~O#LLMERP~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMERP~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMERP~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 67 		  // Minor color
+WRITE_BYTE 0x2e 50 		  // Major color
+
+COPY_EXISTING ~UDDROW24.cre~ ~override/O#LLMERS.cre~
+WRITE_ASCII 0x248 ~O#LLMERS~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMERS~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMERS~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 62 		  // Minor color
+WRITE_BYTE 0x2e 42 		  // Major color
+
+COPY_EXISTING ~UDDROW25.cre~ ~override/O#LLMERW.cre~
+WRITE_ASCII 0x248 ~O#LLMERW~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMERW~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMERW~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 52 		  // Minor color
+WRITE_BYTE 0x2e 20 		  // Major color
+
+COPY_EXISTING ~UDDROW27.cre~ ~override/O#LLRIV0.cre~
+WRITE_ASCII 0x248 ~O#LLRIVA~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV0~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV0~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~UDDROW28.cre~ ~override/O#LLRIV1.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW29.cre~ ~override/O#LLRIV2.cre~
+WRITE_ASCII 0x248 ~O#LLRIVA~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~UDDROW27.cre~ ~override/O#LLRIV3.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW29.cre~ ~override/O#LLRIV4.cre~
+WRITE_ASCII 0x248 ~O#LLRIVA~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~UDDROW29.cre~ ~override/O#LLRIV5.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV5~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV5~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW27.cre~ ~override/O#LLRIV6.cre~
+WRITE_ASCII 0x248 ~O#LLRIVA~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV6~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV6~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~UDDROW28.cre~ ~override/O#LLRIV7.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV7~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV7~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDDROW29.cre~ ~override/O#LLRIV8.cre~
+WRITE_ASCII 0x248 ~O#LLRIVA~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV8~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV8~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~UDDROW27.cre~ ~override/O#LLRIV9.cre~
+WRITE_ASCII 0x248 ~O#LLEnem~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLRIV9~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLRIV9~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDSPID02.cre~ ~override/O#LLSPI1.cre~
+WRITE_ASCII 0x248 ~O#LLFigh~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSpi1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSpi1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDSPID02.cre~ ~override/O#LLSPI2.cre~
+WRITE_ASCII 0x248 ~O#LLFigh~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSpi2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSpi2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDSPID02.cre~ ~override/O#LLSPI3.cre~
+WRITE_ASCII 0x248 ~O#LLFigh~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSpi3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSpi3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~UDSPID02.cre~ ~override/O#LLSPI4.cre~
+WRITE_ASCII 0x248 ~O#LLFigh~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLSpi4~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLSpi4~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~~	     #8   // default script
+
+COPY_EXISTING ~DADROW9.cre~ ~override/O#LLZEDE.cre~
+WRITE_ASCII 0x248 ~O#LLZEDE~  #8   // override
+WRITE_ASCII 0x2cc ~O#LLZEDE~  #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLZEDE~  #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 94 		  // Minor color
+WRITE_BYTE 0x2e 113 		  // Major color
+SAY NAME1 @22
+SAY NAME2 @22
+
+COPY_EXISTING ~UDDROW34.cre~ ~override/O#LLZEDM.cre~
+WRITE_ASCII 0x248 ~O#LLZEDM~  #8   // override
+WRITE_ASCII 0x2cc ~O#LLZEDM~  #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLZEDM~  #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 114 		  // Minor color
+WRITE_BYTE 0x2e 103 		  // Major color
+
+COPY ~Sellswords/Characters/O#LLMERE.cre~ ~override/O#LLMERE.cre~
+WRITE_ASCII 0x248 ~O#LLMERE~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLMERE~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLMERE~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 74 		  // Minor color
+WRITE_BYTE 0x2e 105 		  // Major color
+SAY NAME1 @23
+SAY NAME2 @23
+
+COPY_EXISTING ~DADROW4.cre~ ~override/O#LLPri2.cre~
+WRITE_ASCII 0x248 ~O#LLPri2~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLPri2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLPri2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~pries18d~ #8   // general script
+WRITE_ASCII 0x268 ~O#LLFigh~ #8   // default script
+
+COPY_EXISTING ~UDCOM01.cre~ ~override/O#LLBOR.cre~
+WRITE_ASCII 0x248 ~O#LLBOR~  #8   // override
+WRITE_ASCII 0x2cc ~O#LLBOR~  #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLBOR~  #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+WRITE_BYTE 0x2d 44 		  // Minor color
+WRITE_BYTE 0x2e 60 		  // Major color
+SAY NAME1 @24
+SAY NAME2 @24
+
+COPY_EXISTING ~urchin2.cre~ ~override/O#LLGirl.cre~
+WRITE_ASCII 0x248 ~O#LLGirl~ #8   // override
+WRITE_ASCII 0x2cc ~O#LLGirl~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLGirl~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLCity~ #8   // default script
+
+COPY_EXISTING ~DADROW5.cre~ ~override/O#LLBan1.cre~
+WRITE_ASCII 0x248 ~O#LLBan~ #8    // override
+WRITE_ASCII 0x2cc ~O#LLBan1~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLBan1~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~UDDROW32.cre~ ~override/O#LLBan2.cre~
+WRITE_ASCII 0x248 ~O#LLBan~ #8    // override
+WRITE_ASCII 0x2cc ~O#LLBan2~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLBan2~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+COPY_EXISTING ~DADROW5.cre~ ~override/O#LLBan3.cre~
+WRITE_ASCII 0x248 ~O#LLBan~ #8    // override
+WRITE_ASCII 0x2cc ~O#LLBan3~ #8   // dialogue
+WRITE_ASCII 0x280 ~O#LLBan3~ #32  // death variable
+WRITE_ASCII 0x250 ~~ 	     #8   // class script
+WRITE_ASCII 0x258 ~~ 	     #8   // race script
+WRITE_ASCII 0x260 ~~ 	     #8   // general script
+WRITE_ASCII 0x268 ~O#LLEnem~ #8   // default script
+
+// Items
+
+COPY_EXISTING ~MISC5J.itm~ ~override/O#LLNot1.itm~
+SAY NAME1 @100
+SAY NAME2 @100
+SAY UNIDENTIFIED_DESC @101
+SAY DESC @101
+
+COPY ~Sellswords/Items/O#LLSw1.bam~ ~override/O#LLSw1.bam~
+COPY ~Sellswords/Items/O#LLBr1.bam~ ~override/O#LLBr1.bam~
+COPY ~Sellswords/Items/O#LLCh1.bam~ ~override/O#LLCh1.bam~
+COPY ~Sellswords/Items/O#LLWa1.bam~ ~override/O#LLWa1.bam~
+
+COPY ~Sellswords/Items/O#LLSw1.itm~ ~override/O#LLSw1.itm~
+SAY NAME2 @102
+SAY DESC @103
+
+COPY ~Sellswords/Items/o#lw1.itm~ ~override/o#lw1.itm~
+SAY NAME1 @112
+SAY NAME2 @104
+SAY UNIDENTIFIED_DESC @113
+SAY DESC @108
+
+COPY ~Sellswords/Items/o#lw2.itm~ ~override/o#lw2.itm~
+SAY NAME1 @112
+SAY NAME2 @105
+SAY UNIDENTIFIED_DESC @113
+SAY DESC @109
+
+COPY ~Sellswords/Items/o#lw3.itm~ ~override/o#lw3.itm~
+SAY NAME1 @112
+SAY NAME2 @106
+SAY UNIDENTIFIED_DESC @113
+SAY DESC @110
+
+COPY ~Sellswords/Items/o#lw4.itm~ ~override/o#lw4.itm~
+SAY NAME1 @112
+SAY NAME2 @107
+SAY UNIDENTIFIED_DESC @113
+SAY DESC @111
+
+COPY_EXISTING ~MISC7D.itm~ ~override/O#LLCure.itm~
+SAY NAME1 @114
+SAY NAME2 @114
+SAY UNIDENTIFIED_DESC @115
+SAY DESC @115
+
+COPY_EXISTING ~BOOKEE.itm~ ~override/O#LLSpel.itm~
+SAY NAME1 @116
+SAY NAME2 @116
+SAY UNIDENTIFIED_DESC @117
+SAY DESC @117
+
+COPY ~Sellswords/Items/O#LLCh1.itm~ ~override/O#LLCh1.itm~
+SAY NAME2 @118
+SAY DESC @119
+
+COPY ~Sellswords/Items/O#LLWa1.itm~ ~override/O#LLWa1.itm~
+SAY NAME2 @120
+SAY DESC @121
+
+COPY ~Sellswords/Items/O#LLBr1.itm~ ~override/O#LLBr1.itm~
+SAY NAME2 @122
+SAY DESC @123
+
+// Stores
+
+COPY ~Sellswords/Stores~ ~override~
+
+LAF HANDLE_AUDIO END
+

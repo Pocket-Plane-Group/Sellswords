@@ -1,0 +1,42 @@
+// Tavern
+IF
+GlobalGT("O#LLQuest","GLOBAL",15)
+Global("O#LLSpawnSpiesDealt","GLOBAL",0)
+THEN
+RESPONSE #100
+ActionOverride("O#LLTAM1",DestroySelf())
+ActionOverride("O#LLTAW2",DestroySelf())
+SetGlobal("O#LLSpawnSpiesDealt","GLOBAL",1)
+END
+
+IF
+Global("O#LLQuest","GLOBAL",17)
+Global("O#LLKimmurielTasks","GLOBAL",7)
+THEN
+RESPONSE #100
+CreateCreature("O#LLMatr",[511.378],12)
+CreateCreature("O#LLGUA3",[427.351],12)
+CreateCreature("O#LLGUA4",[476.319],12)
+SetGlobal("O#LLQuest","GLOBAL",19)
+END
+
+IF
+GlobalGT("O#LLQuest","GLOBAL",20)
+Global("O#LLSpawnO#L006Kimm","GLOBAL",0)
+THEN
+RESPONSE #100
+ActionOverride("O#LLKimm",DestroySelf())
+SetGlobal("O#LLSpawnO#L006Kimm","GLOBAL",1)
+END
+
+IF
+GlobalGT("O#LLQuest","GLOBAL",25)
+Global("O#LLSpawnO#L006","GLOBAL",0)
+THEN
+RESPONSE #100
+ActionOverride("O#LLTAM2",DestroySelf())
+ActionOverride("O#LLTAW1",DestroySelf())
+ActionOverride("O#LLTAV",DestroySelf())
+ActionOverride("O#LLBor",DestroySelf())
+SetGlobal("O#LLSpawnO#L006","GLOBAL",1)
+END

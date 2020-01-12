@@ -1,0 +1,12 @@
+// Athkatla: Endge's fruit shop, meeting the drow messenger
+IF
+Global("O#LLQuest","GLOBAL",0)
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
+AreaCheck("AR0707")
+THEN
+RESPONSE #100
+CreateCreature("O#LLMess",[377.487],12)
+SetGlobal("O#LLQuest","GLOBAL",1)
+Continue()
+END
+

@@ -1,0 +1,55 @@
+// Athkatla: sewers of the Temple District, meeting Kimmuriel
+IF
+Global("O#LLQuest","GLOBAL",2)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+THEN
+RESPONSE #100
+SetGlobal("O#LLQuest","GLOBAL",3)
+ActionOverride(Player1,StartDialog("player1",Player1))
+END
+
+IF
+Global("O#LLQuest","GLOBAL",4)
+CombatCounter(0)
+THEN
+RESPONSE #100
+CreateCreatureObjectOffset("O#LLKIMM",Player1,[50.50])
+SetGlobal("O#LLQuest","GLOBAL",5)
+END
+
+IF
+Global("O#LLQuest","GLOBAL",6)
+THEN
+RESPONSE #100
+CreateCreatureObjectOffset("O#LLTro1",Player1,[250.250])
+CreateCreatureObjectOffset("O#LLTro2",Player1,[250.250])
+CreateCreatureObjectOffset("O#LLTro3",Player1,[250.250])
+CreateCreatureObjectOffset("O#LLTro4",Player1,[260.250])
+SetGlobal("O#LLQuest","GLOBAL",7)
+END
+
+IF
+Global("O#LLQuest","GLOBAL",7)
+Dead("O#LLTro1")
+Dead("O#LLTro2")
+Dead("O#LLTro3")
+Dead("O#LLTro4")
+CombatCounter(0)
+THEN
+RESPONSE #100
+CreateCreatureObjectOffset("O#LLKIMM",Player1,[50.50])
+SetGlobal("O#LLQuest","GLOBAL",8)
+END
+
+IF
+OR(2)
+Global("O#LLQuest","GLOBAL",1000)
+Global("O#LLQuest","GLOBAL",100)
+OR(2)
+Global("O#LLDrowItemCheck","GLOBAL",1)
+Global("O#LLDrowItemCheck","GLOBAL",2)
+THEN
+RESPONSE #100
+SetGlobal("O#LLDrowItemCheck","GLOBAL",0)
+END

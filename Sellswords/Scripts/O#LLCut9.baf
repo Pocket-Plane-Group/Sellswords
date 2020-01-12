@@ -1,0 +1,13 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+Wait(2)
+ActionOverride("O#LLKIMM",ReallyForceSpell("O#LLJARL",WIZARD_STONE_TO_FLESH))
+CreateVisualEffect("SPSTRENH",[704.808])
+PlaySound("EFF_P15")
+Wait(4)
+ActionOverride("O#LLJARL",StartDialogueNoSet(Player1))
+END
+
