@@ -1,5 +1,5 @@
   		     The Sellswords MOD for Baldur's Gate II
-				   Version 7
+				   Version 8
 			  A Pocket Plane Group Project
 			   http://www.pocketplane.net
 
@@ -337,6 +337,10 @@ winLAME					http://winlame.sourceforge.net
 -------------------
 6. Version History
 -------------------
+
+Version 8
+-updated sellswords.ini with the GitHub address for download
+-added folder libiconv-1.9.2-1-src.zip with iconv licence info
 
 Version 7
 - EET compatibility (by k4thos)
