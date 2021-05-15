@@ -302,7 +302,7 @@ Chinese translation by Merzbau.
 
 French translations by Deratiseur, proofreading by Rivvers.
 
-Polish translation by Stars of Mystra.
+Polish translation by Jedimag & morgan (Stars of Mystra Forum).
 
 The following portraits feature in the mod with kind permission from the artists:
 
@@ -344,7 +344,7 @@ winLAME					http://winlame.sourceforge.net
 
 Version 9
 - French version added, by Deratiseur (proofreading by Rivvers).
-- Polish translation added, by Stars of Mystra. 
+- Polish translation added, by Jedimag & morgan. 
 
 Version 8
 -updated sellswords.ini with the GitHub address for download
