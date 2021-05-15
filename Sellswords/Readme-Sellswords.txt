@@ -1,5 +1,5 @@
   		     The Sellswords MOD for Baldur's Gate II
-				   Version 9
+				   Version 9.1
 			  A Pocket Plane Group Project
 			   http://www.pocketplane.net
 
@@ -341,6 +341,9 @@ winLAME					http://winlame.sourceforge.net
 -------------------
 6. Version History
 -------------------
+
+Version 9.1
+- corrected credits for Polish version.
 
 Version 9
 - French version added, by Deratiseur (proofreading by Rivvers).
