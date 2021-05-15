@@ -1,6 +1,6 @@
 BACKUP ~Sellswords/Backup~
 AUTHOR ~http://forums.pocketplane.net~
-VERSION ~v8~
+VERSION ~v9~
 
 README ~Sellswords/%LANGUAGE%/Readme-Sellswords.txt~ ~Sellswords/Readme-Sellswords.txt~ 
 
@@ -38,6 +38,8 @@ LANGUAGE ~English~ ~English~ ~Sellswords/English/Setup-Sellswords.tra~
 LANGUAGE ~Russian~ ~Russian~ ~Sellswords/Russian/Setup-Sellswords.tra~
 LANGUAGE ~German (by Gerri)~ ~German~ ~Sellswords/German/Setup-Sellswords.tra~
 LANGUAGE ~Chinese (by Merzbau)~ ~Schinese~ ~Sellswords/Schinese/Setup-Sellswords.tra~
+LANGUAGE ~French~ ~french~ ~Sellswords/french/Setup-Sellswords.tra~
+LANGUAGE ~Polish (by Stars of Mystra)~ ~polish~ ~Sellswords/polish/Setup-Sellswords.tra~
 
 BEGIN @0
 

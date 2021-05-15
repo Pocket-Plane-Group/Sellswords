@@ -1,0 +1,227 @@
+@0 = ~The Sellswords mod do Baldur's Gate II~
+@1 = ~Wyglada na to, ze nie masz zainstalowanego dodatku Tron Bhaala. Jest on wymagany do prawidlowego funkcjonowania modyfikacji The Sellswords~
+@2 = ~To przejœcie chronione jest przez mroczn¹ magiê. Potrzebujesz w³aœciwego kamienia stra¿niczego, aby nim przejœæ~
+
+/* IMIONA POSTACI */
+@10 = ~Kimmuriel~
+@11 = ~Matka Prze³o¿ona Jeven~
+@12 = ~Lorn Jeven~
+@13 = ~Jey're Jeven~
+@14 = ~Jergan~
+@15 = ~K'Hui~
+@16 = ~Vintul~
+@17 = ~Mas'sai~
+@18 = ~Nelros~
+@19 = ~Koba~
+@20 = ~Lavaes~
+@21 = ~Kapitan Domu Jeven~
+@22 = ~Zedeona~
+@23 = ~Merae Jeven~
+@24 = ~Bor Jeven~
+
+/* PRZEDMIOTY */
+@100 = ~Zapiski drowa~
+@101 = ~Runy na pierwszy rzut oka wygl¹daj¹ obco, lecz nagle zdajesz sobie sprawê, ¿e to odrêczne pismo drowa. Wci¹¿ jesteœ w stanie zrozumieæ ich jêzyk dziêki zaklêciu Adalon i potrafisz odcyfrowaæ jej zawartoœæ. Sam tekst jest bardzo prosty: "Musimy omówiæ pewn¹ ofertê, która mo¿e byæ dla ciebie bardzo korzystna. PrzyjdŸ do sklepu Enga. Znajduje siê on na prawo od Targu Przygód. Wy, naziemcy, powinniœcie wiedzieæ, gdzie to jest. Czas odgrywa kluczow¹ rolê"~
+@102 = ~Sejmitar +4, Upiór~
+@103 = ~Sejmitar ten przesi¹kniêty jest dawno zapomnian¹ zemst¹ w wyniku czego jest on ¿¹dny krwi. ¯¹dza ta dla kogokolwiek o dobrym sercu jest zbyt wielka, by móg³ on chocia¿ rozwa¿aæ jego dobycie.
+
+PARAMETRY:
+
+Obra¿enia: 1K8 +4, +1K4 pkt. obra¿eñ od ognia
+TraK0: +4 
+Typ obra¿eñ: sieczne
+Specjalne:
+ Regeneruje 1 pkt. ¿ycia co 6 sekund
+ +1 do Si³y
+Waga: 4
+OpóŸnienie: 2
+Rodzaj bieg³oœci: sejmitar/wakizashi/ninja-to
+Typ broni: 1-rêczna
+Wymagana si³a: 8
+Nie mo¿e u¿ywaæ:
+ Postaæ o dobrym charakterze
+ Mag
+ Kap³an~
+@104 = ~Pierwszy kamieñ stra¿niczy Matki Prze³o¿onej~
+@105 = ~Drugi kamieñ stra¿niczy Matki Prze³o¿onej~
+@106 = ~Trzeci kamieñ stra¿niczy Matki Prze³o¿onej~
+@107 = ~Kamieñ stra¿niczy skarbca Matki Prze³o¿onej~
+@108 = ~Ten kamieñ stra¿niczy pozwoli ci przekroczyæ pierwsz¹ barierê. Musisz go posiadaæ, by wejœæ do sanktuarium Matki Prze³o¿onej, jeœli naprawdê chcesz uwolniæ Jarlaxle'a.~
+@109 = ~Ten kamieñ stra¿niczy pozwoli ci przekroczyæ drug¹ barierê. Musisz go posiadaæ, by wejœæ do sanktuarium Matki Prze³o¿onej, jeœli naprawdê chcesz uwolniæ Jarlaxle'a.~
+@110 = ~Ten kamieñ stra¿niczy pozwoli ci wejœæ do prywatnych komnat Matki Prze³o¿onej. Jednak¿e bêdziesz potrzebowaæ jeszcze kamienia stra¿niczego skarbca.~
+@111 = ~Ten kamieñ stra¿niczy pozwoli ci wejœæ do skarbca Domu Jeven. Jarlaxle powinien znajdowaæ siê w œrodku.~
+@112 = ~Kamieñ stra¿niczy drowa~
+@113 = ~Czêsto naznaczane magicznymi runami i symbolami, kamienie stra¿nicze s¹ potê¿nymi magicznymi przedmiotami, umo¿liwiaj¹cymi przedostanie siê przez obszary chronione magi¹. Poniewa¿ wiêkszoœæ z nich jest unikatowa i wyspecjalizowana, ma³o który posiada wiêcej ni¿ jedn¹ funkcjê.~
+@114 = ~Lekarstwo drowa~
+@115 = ~Mikstura ta leczy bardzo specyficzn¹ œlepotê powodowan¹ drowi¹ magi¹.~
+@116 = ~Ksiêga czarów Zedeony~
+@117 = ~Imiê w³aœcicielki znajduje siê w lewym górnym rogu. Ta ksiêga na pewno nie nale¿y do Lavaesa.~
+@118 = ~Kolczuga Prze³o¿onej~
+@119 = ~Ta lekka kolczuga przesi¹kniêta jest woni¹ krwi. Najwidoczniej jej poprzedni w³aœciciel spotka³ swój koniec ca³kiem niedawno. Z kolczugi tej, bêd¹cej niew¹tpliwie dzie³em drowów, emanuje dziwna aura z³ych przeczuæ. Solidna i znakomicie wykonana, bêdzie dobrze s³u¿yæ nowemu w³aœcicielowi.
+
+PARAMETRY:
+
+Klasa Pancerza: 2
+Specjalne:
+ +1 do Zrêcznoœci
+Waga: 7
+Wymagana si³a: 5
+Nie mo¿e u¿ywaæ:
+ Druid
+ Mag~
+@120 = ~Ró¿d¿ka Prze³o¿onej~
+@121 = ~Ta delikatna i smuk³a ró¿d¿ka skrywa w œrodku czyst¹ œmieræ. Ka¿dy ³adunek uwalnia energiê, bêd¹c¹ w stanie natychmiast zabiæ nawet najpotê¿niejszego przeciwnika.
+
+PARAMETRY:
+
+Specjalne:
+ Zabija ofiarê, je¿eli nie wykona rzutu przeciw ró¿d¿kom z modyfikatorem -2
+Zasiêg: 30 metrów
+Obszar dzia³ania: 1 istota
+Nie mo¿e u¿ywaæ:
+ Wojownik
+ Druid
+ Kap³an
+ Z³odziej~
+@122 = ~Rêkawice dridera~
+@123 = ~Plotka g³osi, ¿e rêkawice te nale¿a³y niegdyœ do Dinin Do'Urdena, brata Drizzta i najemnika Bregan D'aerthe. Zosta³ przemieniony w dridera przez swoj¹ siostrê Viernê i zgin¹³ podczas najazdu na króla krasnoludów Bruenora Walecznego M³ota.
+
+PARAMETRY:
+
+Specjalne:
+ Si³a: 19
+Waga: 2
+Nie mo¿e u¿ywaæ: 
+ Z³odziej
+ Mag~
+
+/* STRINGI WYŒWIETLANE NAD G£OW¥ */
+@1000 = ~Wzywa³eœ mnie? Czekaj... Kimmuriel? Co siê dzieje?~
+@1001 = ~Na nich, moje cienie! Wiêcej g³upców do mojej kolekcji!~
+@1002 = ~Œmieræ Domowi Jeven!~
+@1003 = ~Wasz dom jest zgubiony! Ratujcie siê póki mo¿ecie, g³upcy!~
+@1004 = ~Naziemiec? Zginiesz razem z reszt¹ domu!~
+@1005 = ~Dom Jeven upadnie!~
+@1006 = ~Intruzi! Giñcie w imiê Lloth!~
+@1007 = ~Rozczarowa³aœ mnie, Zedeono.~
+@1008 = ~Mistrzu, proszê, nie wypêdzaj mnie! Moja ksiêga czarów zosta³a skradziona...~
+@1009 = ~Bez niej jesteœ bezu¿yteczna. Nie ma ju¿ d³u¿ej dla ciebie miejsca w Czarodziejstwie.~
+@1010 = ~Nie!~
+@1011 = ~Kto jest ojcem dziecka?~
+@1012 = ~Jarlaxle, moja pani. By³am jego na³o¿nic¹. On obieca³...~
+@1013 = ~G³upia dziewczyno. Jego obietnice nie s¹ w tej chwili nic warte.~
+@1014 = ~Masz ju¿ bliŸniaki z Jey'Re. Jak ka¿e obyczaj, twój trzeci syn zostanie z³o¿ony w ofierze Lloth w momencie, kiedy siê narodzi.~
+@1015 = ~Nie! Jarlaxle przysi¹g³, ¿e do tego nie dopuœci!~
+@1016 = ~Wiêc módl siê, ¿eby by³a to córka. Choæ mo¿e tak czy owak z³o¿ymy j¹ w ofierze! Hahaha!~
+@1017 = ~Proszê, niech mi ktoœ pomo¿e.~
+@1018 = ~Wczo³gaj siê pod kamieñ i zdechnij, kaleko!~
+@1019 = ~Dom Jeven nie potrzebuje œlepych wojowników!~
+@1020 = ~Jest lekarstwo na moj¹ œlepotê. Znowu bêdê móg³ zabijaæ dla Domu Jeven.~
+@1021 = ~Nagrodzê ciê, jeœli przyniesiesz mi lekarstwo.~
+@1022 = ~Pomocy! Proszê! Oni zabij¹ moj¹ siostrê!~
+@1023 = ~ChodŸ ze mn¹! Jeœli mi nie pomo¿esz, zabij¹ j¹!~
+@1024 = ~Mistrzu! Przyprowadzi³am ci Dzieciê Bhaala!~
+@1025 = ~Dobrze. Zabijcie <PRO_MALEFEMALE> i szybko obrabujcie j<PRO_HISHER> cia³o, zanim Matka Prze³o¿ona siê dowie!~
+@1026 = ~Czy mogê na chwilê ci przeszkodziæ, o najpotê¿niejsza istoto spoœród naziemców?~
+
+/* DZIENNIK */
+
+/* ATHKATLA */
+/* WYKONANE ZADANIA */ @9999 = ~Nieznajomy drow
+
+Drowi pos³aniec zaoferowa³ mi wspó³pracê z Bregan D'aerthe, grup¹ drowów najemników. Odmówiliœmy.~
+@10000 = ~ Nieznajomy drow
+
+Jakieœ dziecko zaczepi³o nas na Promenadzie i powiedzia³o, ¿e dziwny drow oczekuje nas w sklepie Enga. Dostaliœmy równie¿ notatkê nak³aniaj¹c¹ do poœpiechu.~
+@10001 = ~ Nieznajomy drow
+
+Drowi pos³aniec powiedzia³, ¿e pracowalibyœmy dla Bregan D'aerthe, grup¹ drowów najemników. Ich porucznik, Kimmuriel, czeka na mnie w kana³ach pod Dzielnic¹ œwi¹tyñ.~
+
+/* MENZOBERRANZAN */
+@10002 = ~Najemnicy
+
+Wreszcie dotarliœmy do Menzoberranzan. Spotkaliœmy siê z Matk¹ Prze³o¿on¹ Domu Jeven i otrzymaliœmy pierwsze rozkazy: spotkaæ siê z kapitanem jej stra¿y i wykonaæ ka¿de zadanie, jakie od niego otrzymamy.~
+@10003 = ~Najemnicy
+
+Kapitan Matki Prze³o¿onej rozkaza³ nam iœæ na wschodni pomost i dowiedzieæ siê dlaczego wojownicy z Domu Jeven s¹ rozz³oszczeni na d³ugo po tym, jak zakoñczy³y siê zawody.~
+@10004 = ~Najemnicy
+
+Dowiedzieliœmy siê, dlaczego wojownicy z Domu Jeven s¹ rozz³oszczeni, i dostarczyliœmy w ich rêce oszusta. Teraz musimy zdaæ raport kapitanowi.~
+@10005 = ~Najemnicy
+
+Nie byliœmy w stanie dowiedzieæ siê, kto z Domu oszukiwa³ na zawodach, wiêc zabiliœmy wszystkich wojowników. Teraz musimy zdaæ raport kapitanowi.~
+@10006 = ~Najemnicy
+
+Kapitan rozkaza³ nam zabiæ szpiegów z domu rywali. Mo¿emy ich rozpoznaæ po tym, ¿e ka¿dy z nich dzisiaj nosi coœ czerwonego spaceruj¹c po ulicach Menzoberranzan. Wœród nich jest jednak tak¿e podwójny agent z Bregan D'aerthe. Powinniœmy najpierw porozmawiaæ z Kimmurielem.~
+@10007 = ~Najemnicy
+
+Kimmuriel kaza³ nam zabiæ dwóch githyanki na zachodnim pomoœcie i odzyskaæ kamieñ stra¿niczy, który posiadaj¹. Jednak przed zabiciem ich, musimy wywiedzieæ siê, co zamierzaj¹.~
+@10008 = ~Najemnicy
+
+Githyanki zaatakowa³y nas niemal natychmiast. Nazwali Jarlaxle'a mianem Kalach-Cha: w³adaj¹cego Srebrnym Mieczem, wspania³ym artefaktem nale¿¹cym do ich rasy.~
+/* WYKONANE ZADANIA */ @10009 = ~Najemnicy
+
+Poprosiliœmy Kimmuriela, aby natychmiast odes³a³ nas do Athkatli. Ta przygoda dobieg³a koñca.~
+@10010 = ~Najemnicy
+
+Kimmuriel poprosi³ nas, abyœmy odwiedzili wys³anników illithidów. Musimy zabezpieczyæ przymierze z nimi przeciw githom.~
+@10011 = ~Najemnicy
+
+Zabiliœmy szpiegów, jednak kiedy powróciliœmy kapitan próbowa³ nas zabiæ! Nie trzeba dodawaæ, ¿e nie ¿yje – zabi³ go nie kto inny, jak s³awny Artemis Entreri. Kimmuriel powinien o tym us³yszeæ.~
+@10012 = ~Najemnicy
+
+Oszala³a drowia kap³anka zatrzyma³a nas i za¿¹da³a, abyœmy jej s³u¿yli. Musimy zabiæ jakichœ wyznawców Eilistraee w po³udniowo-zachodnim krañcu miasta. Moglibyœmy to zrobiæ, b¹dŸ zamiast tego moglibyœmy przekonaæ ich do ucieczki.~
+/* WYKONANE ZADANIA */ @10013 = ~Najemnicy
+
+Kap³anka by³a bardzo zadowolona i nagrodzi³a nas tak, jak obieca³a. Skoñcz¹ siê rozmowy o br¹zowoskórych i ciemnow³osych drowach, przynajmniej w tej czêœci Menzoberranzan.~
+/* WYKONANE ZADANIA */ @10014 = ~Najemnicy
+
+Nie chcieliœmy zabijaæ wyznawców Eilistraee i zdecydowaliœmy, ¿e zamiast tego ich wypuœcimy.~
+@10015 = ~Najemnicy
+
+Duergar, Koba, poprosi³ nas, abyœmy wyzwolili ich ambasadê od cieni. Ambasada zosta³a zaznaczona na mapie.~
+/* WYKONANE ZADANIA */ @10016 = ~Najemnicy
+
+Po zabiciu cieni otrzymaliœmy “nagrodê”: duergarowie natychmiast nas zaatakowali i musieliœmy ich wszystkich zabiæ. Po prostu kolejny dzieñ w Menzoberranzan.~
+@10017 = ~Najemnicy
+
+Drowi mag, Lavaes, poprosi³ mnie o pomoc. Lavaesa chcia³ sprzedaæ swoj¹ duszê demonowi, jednak w ostatniej chwili siê rozmyœli³. Teraz demon odmawia odejœcia. Skoro jednak nie mam w³asnej duszy, mogê w miejsce Lavaesa spróbowaæ u³o¿yæ siê z demonem.~
+/* WYKONANE ZADANIA */ @10018 = ~Najemnicy
+
+Demon zgodzi³ siê na kupno mojej "duszy" i zap³aci³ za to uzgodnion¹ kwotê. Lavaes jest teraz wolny.~
+@10019 = ~Najemnicy
+
+OdnaleŸliœmy Mroczn¹ Arenê, miejsce, gdzie drowi wojownicy testuj¹ swoj¹ odwagê przeciwko innym wojownikom, golemom czy nieumar³ym. Do tej pory ¿adna dru¿yna nie ukoñczy³a wszystkich prób. Zamierzamy stanowiæ pierwsz¹.~
+/* WYKONANE ZADANIA */ @10020 = ~Najemnicy
+
+Walczyliœmy na Mrocznej Arenie trzy razy i otrzymaliœmy wygran¹. Próby dobieg³y koñca.~
+@10021 = ~Najemnicy
+
+Matka Prze³o¿ona pojawi³a siê przed nami i oskar¿y³a Kimmuriela o zdradê. Aby okazaæ, ¿e siê myli, musimy zabiæ jej zdradzieckiego syna, Lorna Jevena, obiecuj¹cego kandydata do Bregan D'aerthe. Kimmuriel nie chce, abyœmy go zabijali, jednak nie mamy zbyt du¿ego wyboru.~
+@10022 = ~Najemnicy
+
+Kimmuriel zaproponowa³, aby nadaæ innemu wojownikowi wygl¹d Lorna Jevena, a potem z zimn¹ krwi¹ uci¹æ mu g³owê. Bêdzie to dostateczny dowód wykonanego zadania. Teraz musimy spotkaæ siê z Artemisem Entrerim, który czeka w pobli¿u pierwszej bariery prowadz¹cej do pa³acu Prze³o¿onej. Entreri powie nam, kto ma pierwszy kamieñ stra¿niczy.~
+@10023 = ~Najemnicy
+
+Artemis Entreri powiedzia³ nam, ¿e pierwszy kamieñ stra¿niczy znajduje siê w posiadaniu najbardziej zaufanego doradcy Matki Prze³o¿onej, Jey'Re Jevena. W tej chwili znajduje siê w komnatach ¿¹dzy i prawdopodobnie bêdziemy musieli go zabiæ. Powinniœmy dokoñczyæ wszystkie inne zadania przed odnalezieniem Jey'Re'a, poniewa¿, gdy siê z nim rozprawimy, bêdziemy musieli poœpieszyæ siê z dotarciem do pa³acu.~
+@10024 = ~Najemnicy
+
+Mam wszystkie trzy kamienie stra¿nicze. Jedyn¹ droga jest pójœcie naprzód przez pa³ac Matki Prze³o¿onej i Jarlaxle’a.~
+/* WYKONANE ZADANIA */ @10025 = ~Najemnicy
+
+W koñcu wróciliœmy z  Menzoberranzan. Matka Prze³o¿ona Jeven zosta³a zabita, a Kimmuriel i Artemis Entreri uwolnili Jarlaxle'a z jego kamiennej postaci. Zostaliœmy sowicie wynagrodzeni.~
+/* WYKONANE ZADANIA */ @10026 = ~Najemnicy
+
+Zaatakowaliœmy w nieodpowiednim momencie i zostaliœmy odes³ani do Athkatli bez wyjaœnienia. Ta przygoda dobieg³a koñca.~
+
+/* NOTATKI NA MAPIE */
+
+@100000 = ~Tawerna~
+@100001 = ~Komnaty ¿¹dzy~
+@100002 = ~Pierwsza bariera~
+@100003 = ~Druga bariera~
+@100004 = ~Pa³ac Matki Prze³o¿onej~
+@100005 = ~Mroczna Arena~
+@100006 = ~Dom Lavaesa~
+@100007 = ~Ambasada duergarów~
+@100008 = ~Rynek~

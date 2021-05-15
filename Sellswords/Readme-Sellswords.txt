@@ -1,5 +1,5 @@
   		     The Sellswords MOD for Baldur's Gate II
-				   Version 8
+				   Version 9
 			  A Pocket Plane Group Project
 			   http://www.pocketplane.net
 
@@ -300,6 +300,10 @@ German translation by Gerri.
 
 Chinese translation by Merzbau.
 
+French translations by Deratiseur, proofreading by Rivvers.
+
+Polish translation by Stars of Mystra.
+
 The following portraits feature in the mod with kind permission from the artists:
 
 Kimmuriel's portrait by Untitliel:
@@ -337,6 +341,10 @@ winLAME					http://winlame.sourceforge.net
 -------------------
 6. Version History
 -------------------
+
+Version 9
+- French version added, by Deratiseur (proofreading by Rivvers).
+- Polish translation added, by Stars of Mystra. 
 
 Version 8
 -updated sellswords.ini with the GitHub address for download

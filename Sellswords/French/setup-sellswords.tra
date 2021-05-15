@@ -1,0 +1,231 @@
+@0 = ~Mod Mercenaires pour Baldur's Gate II~
+@1 = ~Vous ne semblez pas avoir installé le pack d'extension Throne of Bhaal. Throne of Bhaal est nécessaire pour le mod.~
+@2 = ~Ce passage est protégé par la magie noire. Vous avez besoin de la pierre de garde appropriée pour le traverser.~
+
+/* CHARACTER NAMES */
+@10 = ~Kimmuriel~
+@11 = ~Mère matrone Jeven~
+@12 = ~Lorn Jeven~
+@13 = ~Jey're Jeven~
+@14 = ~Jergan~
+@15 = ~K'Hui~
+@16 = ~Vintul~
+@17 = ~Mas'sai~
+@18 = ~Nelros~
+@19 = ~Koba~
+@20 = ~Lavaës~
+@21 = ~Capitaine de la maison Jeven~
+@22 = ~Zedeon~
+@23 = ~Merae Jeven~
+@24 = ~Bor Jeven~
+
+/* ITEMS */
+@100 = ~Une note Drow~
+@101 = ~Les runes semblent peu familières au début, mais ensuite on se rend compte que c'est une écriture drow. Vous comprenez toujours la langue après le sort d'Adalon et vous êtes capable d'en déchiffrer le contenu. Le texte lui-même est très simple : "Nous devons discuter d'une offre qui pourrait s'avérer très profitable pour vous. Venez me parler à la boutique d'Enge. Elle est situé juste au-dessus du magasin de l'aventurier. Vous, les surfaciens, devriez savoir où se trouvent de telles choses. Le temps est un facteur essentiel.~
+@102 = ~Cimeterre +4, Âme-en-peine~
+@103 = ~Ce cimeterre sent la vengeance et a manifestement soif de sang. Trop affamé pour qu'une personne vraiment bonne de cœur envisage même de le brandir.
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+ Régénération : 1 point de vie toutes les 6 secondes
+ FORCE +1
+Dégâts : 1D8 + 4, +1D4 dégâts de feu
+TAC0 : +4
+Type de dégât : tranchant
+Type de compétence : cimeterre
+Facteur de vitesse : 2
+Type : une main
+Poids : 4
+Force nécessaire : 8
+Non utilisable par :
+Alignement bon
+ Mage
+ Clerc~
+@104 = ~Première pierre de garde de la Mère matrone~
+@105 = ~Deuxième pierre de garde de la Mère matrone~
+@106 = ~Troisième pierre de garde de la Mère matrone~
+@107 = ~Pierre de garde de la trésorerie de la Mère matrone~
+@108 = ~Cette pierre de garde vous permettra de passer la première barrière. Vous en avez besoin pour entrer dans le sanctuaire de la Mère Matrone si vous voulez vraiment libérer Jarlaxle.~
+@109 = ~Cette pierre de garde vous permettra de passer la deuxième barrière. Vous en avez besoin pour entrer dans le sanctuaire de la Mère Matrone si vous voulez vraiment libérer Jarlaxle.~
+@110 = ~Cette pierre de garde vous permettra d'accéder au sanctuaire privé de la Mère Matrone. Vous aurez cependant besoin d'une pierre de garde supplémentaire pour accéder à la trésorerie.~
+@111 = ~Cette pierre de garde vous permettra d'accéder à la trésorerie de la Maison Jeven. Jarlaxle devrait être à l'intérieur.~
+@112 = ~Une Pierre de garde Drow~
+@113 = ~Souvent marquées de glyphes, de runes ou de symboles magiques, les pierres de garde sont des objets puissamment enchantés destinés à permettre à leur porteur de traverser des zones magiquement gardées. Comme la plupart des pierres de garde sont uniques et spécifiques dans leur nature, il est rare d'en trouver une qui ait plus d'un usage.~
+@114 = ~Un remède Drow~
+@115 = ~Cette potion guérit un type très spécifique de cécité causée par la magie drow.~
+@116 = ~Livre de sorts de Zédéon~
+@117 = ~Le nom du propriétaire est gravé dans le coin supérieur gauche. Ce livre de sorts n'appartient manifestement pas à Lavaës.~
+@118 = ~Cotte de mailles de la Matrone~
+@119 = ~Cette maille légère sent le sang. Son ancienne propriétaire a probablement connu une fin prématurée il n'y a pas longtemps. De toute évidence de fabrication drow, la cotte de mailles émet une étrange aura de prescience. Mais elle est solide et bien faite, et elle servira sans doute bien son nouveau propriétaire.
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+ Dextérité +1
+Classe d'armure : 2
+Poids : 7
+Force nécessaire : 5
+Non utilisable par :
+ Druide 
+ Mage~
+@120 = ~Baguette de la Matrone~
+@121 = ~Cette baguette est délicate et mince, mais elle cache en elle la mort pure. Chaque charge libère une énergie qui peut tuer instantanément même l'ennemi le plus puissant.
+
+CARACTÉRISTIQUES :
+
+Effet : Tue la cible si elle rate un jet de sauvegarde contre les baguettes avec une pénalité de -2
+Portée : 30 mètres
+Cible : 1 créature
+
+Poids : 1
+Intelligence nécessaire : 9
+Non utilisable par :
+ Guerrier
+ Druide
+ Clerc
+ Voleur~
+@122 = ~Gantelets de Drider~
+@123 = ~La rumeur veut que ces mains aient appartenu à Dinin Do'Urden, le frère de Drizzt et un mercenaire de Bregan D'aerthe. Sa soeur Vierna l'a transformé en drider et l'a ensuite tué lors d'un raid contre le roi nain Bruenor Marteaudeguerre.
+
+CARACTÉRISTIQUES :
+
+Force mise à 19
+Poids : 2
+Non utilisable par :
+ Voleur 
+ Mage~
+
+/* DISPLAY STRING HEADS */
+@1000 = ~Vous avez appelé ? Attendez... Kimmuriel ? Qu'est-ce qui se passe ?~
+@1001 = ~À eux, mes ombres ! Encore des imbéciles pour ma collection !~
+@1002 = ~Mort à la maison Jeven !~
+@1003 = ~Votre maison est perdue ! Courez pour vos vies, imbéciles !~
+@1004 = ~Un surfacien ? Vous tomberez avec le reste de la maison !~~Un surfacienne ? Vous tomberez avec le reste de la maison !~
+@1005 = ~La maison Jeven tombera !~
+@1006 = ~Intrus ! Mourez au nom de Lolth !~
+@1007 = ~Tu m'as déçu, Zédéon.~
+@1008 = ~Maître, je vous en prie, ne me chassez pas ! Mon livre de sorts a été volé...~
+@1009 = ~Et vous ne m'êtes d'aucune utilité sans lui. Il n'y a plus de place pour vous à Sorcere.~
+@1010 = ~Non !~
+@1011 = ~Qui est le père de l'enfant ?~
+@1012 = ~Jarlaxle, ma maîtresse. Je devais être sa compagne. Il m'a promis...~
+@1013 = ~Crétine. Ses promesses ne valent plus rien maintenant.~
+@1014 = ~Vous avez des jumeaux avec Jey'Re. Comme la coutume l'exige, votre troisième fils sera sacrifié à Lolth dès sa naissance.~
+@1015 = ~Non ! Jarlaxle a juré qu'il ne le laisserait pas faire !~
+@1016 = ~Alors priez pour avoir une fille. Ou peut-être que nous la sacrifierons quand même ! Ha ha ha !~
+@1017 = ~S'il vous plaît, personne ne va m'aider ?~
+@1018 = ~Rampes sous un rocher et meurs, infirme !~
+@1019 = ~La maison Jeven n'a pas besoin de guerriers aveugles !~
+@1020 = ~Il existe un remède à ma cécité. Je peux encore tuer pour la maison Jeven.~
+@1021 = ~Je vous récompenserai si vous m'apportez le remède.~
+@1022 = ~Au secours ! S'il vous plaît ! Ils vont tuer ma sœur !~
+@1023 = ~Venez avec moi ! Si vous n'aidez pas, ils vont l'assassiner !~
+@1024 = ~Maître ! Je vous ai apporté l'enfant de Bhaal !~
+@1025 = ~Bien. Tuez le et pillez son corps rapidement, avant que la Matrone ne le découvre !~
+@1026 = ~Puis-je avoir un moment de votre temps, oh le plus grand des surfaciens ?~~Puis-je avoir un moment de votre temps, oh la plus grande des surfaciennes ?~
+
+/* JOURNAL ENTRIES */
+
+/* ATHKATLA */
+/* DONE */ @9999 = ~Un étrange drow.
+
+Un messager drow m'a proposé un partenariat avec Bregan D'aerthe, un groupe de drow mercenaires. J'ai refusé.~
+@10000 = ~Un étrange drow.
+
+Un enfant s'est approché de moi sur la Promenade et m'a dit qu'un drow bizarre m'attendait dans la boutique d'Enge. On m'a également remis une note qui parlait d'urgence.~
+@10001 = ~Un étrange drow.
+
+Le messager drow a dit que je travaillerais avec Bregan D'aerthe, un groupe de drow mercenaires. Leur lieutenant, Kimmuriel, m'attend dans les égouts sous le quartier du Temple.~
+
+/* MENZOBERRANZAN */
+@10002 = ~Mercenaires.
+
+Je suis enfin à Menzoberranzan. J'ai rencontré la Mère matrone Jeven et j'ai reçu ses premiers ordres : rencontrer le capitaine de sa garde à l'extérieur et accomplir toutes les tâches qu'il me confiera.~
+@10003 = ~Mercenaires.
+
+Le capitaine de la Mère matrone m'a ordonné de me rendre sur la plate-forme est pour découvrir pourquoi les combattants masculins de la Maison sont en colère bien après la fin du championnat.~
+@10004 = ~Mercenaires.
+
+J'ai découvert pourquoi les combattants de la Maison Jeven étaient en colère et je leur ai livré le tricheur. Maintenant, je vais faire un rapport au capitaine.~
+@10005 = ~Mercenaires.
+
+Je n'ai pas pu découvrir qui avait triché dans le championnat de la Maison, et j'ai massacré tous les combattants. Maintenant, je vais faire un rapport au capitaine.~
+@10006 = ~Mercenaires.
+
+Le capitaine m'a ordonné de tuer les espions d'une maison rivale. Tous portent aujourd'hui quelque chose de rouge dans les rues de Menzoberranzan. Mais il y a aussi un agent double de Bregan D'aerthe parmi eux. Je devrais d'abord parler à Kimmuriel.~
+@10007 = ~Mercenaires.
+
+Kimmuriel m'a demandé de tuer deux githyankis sur la plate-forme ouest et de récupérer la pierre de garde qu'ils possèdent. Mais avant de les tuer, je dois découvrir ce qu'ils mijotent.~
+@10008 = ~Mercenaires.
+
+Les githyankis m'ont attaqué presque immédiatement. Ils ont appelé Jarlaxle le Kalach-Cha : le manieur de l'Epée d'argent, un grand artefact de leur race.~
+/* DONE */ @10009 = ~Mercenaires.
+
+J'ai demandé à Kimmuriel de me renvoyer immédiatement à Athkatla. Cette aventure est terminée.~
+@10010 = ~Mercenaires.
+
+Kimmuriel m'a demandé de rendre visite aux émissaires illithids. Je dois obtenir une alliance avec eux contre les githyankis.~
+@10011 = ~Mercenaires.
+
+J'ai tué les espions, mais le capitaine a essayé de m'assassiner à mon retour ! Inutile de dire qu'il est mort - tué par nul autre qu'Artemis Entreri. Kimmuriel devrait le savoir.~
+@10012 = ~Mercenaires.
+
+Une prêtresse drow folle m'a arrêté et m'a demandé un service. Je dois tuer quelques partisans d'Eilistraee à la plate-forme sud-ouest. Je pourrais le faire, ou je pourrais les convaincre de s'enfuir à la place.~
+/* DONE */ @10013 = ~Mercenaires.
+
+La prêtresse était très heureuse et m'a récompensé comme elle l'avait promis. On ne parle plus de drows à la peau brune et aux cheveux noirs, du moins dans cette partie de Menzoberranzan.~
+/* DONE */ @10014 = ~Mercenaires.
+
+Je ne voulais pas tuer les partisans d'Eilistraee et j'ai décidé de les laisser partir à la place.~
+@10015 = ~Mercenaires.
+
+Un duergar, Koba, m'a demandé de libérer leur ambassade des ombres. L'ambassade est marquée sur la carte.~
+/* DONE */ @10016 = ~Mercenaires.
+
+J'ai tué les ombres, et j'ai reçu ma "récompense" : les duergars m'ont immédiatement attaqué, et j'ai dû tous les massacrer. Un jour de plus à Menzoberranzan.~
+@10017 = ~Mercenaires.
+
+Un drow mage, Lavaës, m'a demandé de l'aide. Lavaës voulait vendre son âme à un démon, mais il a changé d'avis au dernier moment. Maintenant, le démon refuse de partir. Comme je n'ai pas d'âme, je pourrais tout aussi bien échanger avec le démon au lieu de Lavaës.~
+/* DONE */ @10018 = ~Mercenaires.
+
+J'ai échangé mon "âme" avec le démon et j'ai reçu ma récompense. Lavaës est libre maintenant.~
+@10019 = ~Mercenaires.
+
+J'ai trouvé l'Arène Noire, un endroit où les combattants drows testent leur courage contre les autres guerriers, les golems et les morts-vivants. Aucune équipe n'a encore terminé la triade complète des épreuves. Je suis peut-être le premier.~
+~Mercenaires.
+
+J'ai trouvé l'Arène Noire, un endroit où les combattants drows testent leur courage contre les autres guerriers, les golems et les morts-vivants. Aucune équipe n'a encore terminé la triade complète des épreuves. Je suis peut-être la première.~
+/* DONE */ @10020 = ~Mercenaires.
+
+J'ai combattu trois fois à l'Arène noire et j'ai reçu ma dernière récompense. Les épreuves sont terminées.~
+@10021 = ~Mercenaires.
+
+La Mère matrone est apparue devant nous et a accusé Kimmuriel de trahison. Pour faire nos preuves, nous devons tuer son fils traître, Lorn Jeven, candidat potentiel à Bregan D'aerthe. Kimmuriel ne veut pas l'assassiner, mais nous n'avons guère le choix.~
+@10022 = ~Mercenaires.
+
+Kimmuriel a réussi à transformer un autre guerrier à l'identique de Lorn Jeven et a froidement tranché la tête du guerrier. Cela suffira comme preuve. Je dois maintenant rencontrer Artemis Entreri près de la première barrière du palais de la Matrone. Entreri me dira qui a la première pierre de garde.~
+@10023 = ~Mercenaires.
+
+Artemis Entreri m'a dit que je pourrais trouver la première pierre de garde en possession du conseiller le plus fiable de la Mère matrone, Jey'Re Jeven. Il est présentement dans les chambres de la luxure, et je devrai probablement le tuer. Ensuite je devrais me dépêcher d'aller au palais, alors je devrais terminer toutes les tâches avant de chercher Jey'Re.~
+@10024 = ~Mercenaires.
+
+J'ai les trois pierres de garde. La seule chose à faire est d'avancer, vers le palais de la Mère matrone et Jarlaxle.~
+/* DONE */ @10025 = ~Mercenaires.
+
+Je suis enfin de retour de Menzoberranzan. La Mère matrone Jeven a été tuée, et Kimmuriel et Artemis Entreri ont libéré Jarlaxle de son état de pierre. J'ai été récompensé par le contenu du trésor.~
+/* DONE */ @10026 = ~Mercenaires.
+
+J'ai attaqué alors que je n'aurais pas dû, et j'ai été renvoyé à Athkatla sans explication. Cette aventure est terminée.~
+
+/* MAP NOTES */
+
+@100000 = ~Taverne~
+@100001 = ~Chambres de la luxure~
+@100002 = ~Première barrière~
+@100003 = ~Deuxième barrière~
+@100004 = ~Palais de la Mère Matrone~
+@100005 = ~Arène Noire~
+@100006 = ~Maison de Lavaës~
+@100007 = ~Ambassade Duergar~
+@100008 = ~Place du marché~
