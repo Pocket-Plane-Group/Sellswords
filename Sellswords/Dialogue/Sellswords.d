@@ -43,6 +43,8 @@ EXTEND_BOTTOM SHOP04 0
 + ~GlobalGT("O#LLQuest","GLOBAL",0)~ + @11 /* Did you even notice a drow elf in your shop? */ + e1
 END
 
+ADD_TRANS_TRIGGER SHOP04 1 ~Global("O#LLQuest","GLOBAL",0)~ DO 0
+
 EXTEND_BOTTOM SHOP04 1
 + ~GlobalGT("O#LLQuest","GLOBAL",0)~ + @10 /* Do you have any business with the drow? */ + e0
 + ~GlobalGT("O#LLQuest","GLOBAL",0)~ + @11 /* Did you even notice a drow elf in your shop? */ + e1
