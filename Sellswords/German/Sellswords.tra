@@ -9,11 +9,11 @@
 @8    = ~Geht zu dem Gemüseladen neben Enges Geschäft. Der D-Drow ist dort drin.~
 @9    = ~Iiiih!~
 @10   = ~Habt Ihr etwas mit dem Drow zu schaffen?~
-@11   = ~Habt Ihr einen Drow in Eurem Geschäft bemerkt?~
+@11   = ~Was macht dieser Drow in Eurem Geschäft?~
 @12   = ~Die Geschäfte laufen sehr schleppend. Einmal kam ein seltsamer Elf in das Geschäft und kaufte eine Avocado, glaube ich. Wollt Ihr auch eine?~
 @13   = ~Drow? Dieser Drow, jener Drow? Viele seltsame Leute, jeder kauft etwas anderes! Wollt Ihr Mangos von mir kaufen, ja?~
 @14   = ~Ihr habt doch Jarlaxle in Ust Natha getroffen, oder? Er war... ist unser Anführer. Er gründete die Bregan D'aerthe, die gefürchtetste Söldnergruppe von Menzoberranzan. Jetzt haben er und sein oberster Leutnant, Kimmuriel Oblodra, mehr Macht als so manche Mutter Oberin.~
-@15   = ~Ich habe von dieser Vereinigung gehört, <CHARNAME>. Gerüchte besagen, dass sie nur an ihrem Profit interessiert sind. Sollte etwas schief laufen, verraten sie Euch nur allzu gerne.~
+@15   = ~Ich habe von dieser Vereinigung gehört, <CHARNAME>. Gerüchte besagen, dass sie nur an Profit interessiert sind. Sollte etwas schief laufen, verraten sie Euch nur allzu gerne.~
 @16   = ~Ich mag diese Bregan D'aerthe nicht, <CHARNAME>. Kein bisschen.~
 @17   = ~Har! Ich sage, wir arbeiten mit diesem Drowabschaum zusammen, stellen ihre Hälse meiner Axt vor und hauen mit ihren Schätzen wieder ab.~
 @18   = ~Wiegt Eure Entscheidung sorgfältig ab, mein Freund. Letztes Mal, als Ihr mit unappetitlichen Verbündeten arbeiten musstet, war das Leben Eurer Schwester in Gefahr. Ist es das wert, diesen dunklen Pfad erneut zu beschreiten?~
@@ -88,7 +88,7 @@
 @87   = ~Kein Bedarf, Oberflächenbewohner. Ich habe meinen Wert dank Euch bewiesen. Zumindest momentan. Es gibt immer Verrat in jeder Ecke. So ist das Leben in Menzoberranzan.~
 @88   = ~Ihr könntet es, aber Ihr würdet es nicht mögen. Es mag dreißigtausend Drow in Menzoberranzan geben, aber Ihr, <PRO_RACE>, werdet immer der dreißigtausendunderste sein.~
 @89   = ~Es ist Zeit für mich zur Heimkehr. Gebt auf Euch acht, Oberflächenbewohner. Und wenn Ihr der Bregan D'aerthe einen Gefallen tun wollt, nervt Enge nicht mit unserem... Bündnis.~
-@90   = ~Ein seltsames Gefühl breitet sich in Euch aus, ähnlich dem, welches Ihr im Unterreich empfandet, als Gedankenschinder Euch mit ihren unheimlichen Kräften angreifen wollten.~
+@90   = ~Ein seltsames Gefühl breitet sich in Euch aus. Erinnerungen an das Unterreich werden wach, als die Gedankenschinder Euch mit ihren unheimlichen Kräften angriffen.~
 @91   = ~Ihr seid zwar nicht im Unterreich, doch das Gefühl kommt Euch sehr bekannt vor. Jemand versucht, Euren Geist auf die Probe zu stellen.~
 @92   = ~Hört auf damit, wer immer Ihr seid!~
 @93   = ~Ich merke, was Ihr da gerade zu tun versucht. Zeigt Euch!~
@@ -134,7 +134,7 @@
 @133  = ~Nein, das war ich nicht. Kommen wir endlich zum Geschäft.~
 @134  = ~Beschreibt mir einfach die Aufgabe und teleportiert mich wo immer auch hin. Ich bin es leid zu warten.~
 @135  = ~So ist das nun mal. Jetzt passt auf.~
-@136  = ~Es gibt eine Mutter Oberin, die ihre Kompetenzen überschritten hat. Als sie von den Intrigen des Hauses Despana hörte, beschloss Mutter Oberin Jeven, die Position ihres Hauses auf dieselbe Art zu festigen: durch Rufen von Dämonen von ungeahnter Macht, um sie gegen ihre Feinde einzusetzen.~ [O#LLKI04]
+@136  = ~Es gibt eine Mutter Oberin, die ihre Grenze überschritten hat. Als sie von den Intrigen des Hauses Despana hörte, beschloss Mutter Oberin Jeven, die Position ihres Hauses auf dieselbe Art zu festigen: durch das Beschwören von mächtigen Dämonen, sie zu besänftigten und gegen ihre Feinde einzusetzen.~ [O#LLKI04]
 @137  = ~Und Ihr wollt, dass ich diese Mutter Oberin beseitige, nehme ich an?~
 @138  = ~Sie werden es wohl niemals lernen, oder? In Ordnung, wann komme ich ins Spiel?~
 @139  = ~Das klingt spaßig. Warum lasst Ihr sie dann nicht gewähren?~
@@ -162,9 +162,9 @@
 @161  = ~Das ist Euer Glück, dass er nicht bei Euch ist. Als er das letzte Mal Menzoberranzan betrat, begann die Zeit der Klagen.~
 @162  = ~Tatsächlich? Ich beginne Euch zu mögen, Kind des Bhaal.~
 @163  = ~Weitere Fragen, die Ihr habt, könnt Ihr später fragen. Seid gewarnt, das Haus Jeven befindet sich im Krieg, und seine Tore sind vor Außenstehenden versiegelt. Ihr werdet außerstande sein, einfach zu gehen, aber ich bin sicher, dass Ihr genug Unterhaltung finden werdet.~ [O#LLKI12]
-@164  = ~Der verlorene Söldner kehrt zurück. Und was habt Ihr mir dieses Mal gebracht hat, Oblodra?~ [O#LLMA01]
-@165  = ~Einen sehr wertvollen Söldner. Das Kind von Bhaal, das aus Ust Natha entkam.~ [O#LLKI13]
-@166  = ~Ihr seid ein Söldner? Gut. Sagt mir, <PRO_GIRLBOY>, betet Ihr zur Spinnenkönigin?~ [O#LLMA02]
+@164  = ~Der verlorene Söldner kehrt zurück. Was habt Ihr mir dieses Mal mitgebracht, Oblodra?~ [O#LLMA01]
+@165  = ~Ein Söldner von nicht geringem Wert. Das Kind von Bhaal, das aus Ust Natha entkam.~ [O#LLKI13]
+@166  = ~Ein Söldner seid Ihr? Gut. Sagt mir, <PRO_GIRLBOY>, betet Ihr zur Spinnenkönigin?~ [O#LLMA02]
 @167  = ~Ähm... Ehre sei Lolth?~
 @168  = ~Auf der Oberfläche beten wir zu anderen Göttern.~
 @169  = ~Wenn ich zu jemandem bete, dann zu mir selbst.~
@@ -180,8 +180,8 @@
 @179  = ~Nein? Lasst die Wand der Treulosen Euch begrüßen. Sie frisst sowohl Oberflächenbewohner als auch Drow. Ha! Nur ein verschlungener Oberflächenbewohner ist ein guter Oberflächenbewohner!~
 @180  = ~Pah! Oblodra, was habt Ihr mir da gebracht? Eine verwesende Qualle?~
 @181  = ~Gut gesprochen! Oberflächenbewohner oder nicht, ich mag <PRO_HISHER>s Geist. Ich werde <PRO_HIMHER> die Peitsche dieses Mal ersparen.~
-@182  = ~Ist das wichtig? Euer neues Spielzeug kämpfte gegen Ust Natha Krieger und verließ das Unterreich unverwundet.~ [O#LLKI14]
-@183  = ~Oh, ich kenne Eure seltsame "Hingabe" zur Königin, mein schleimiger psionischer Freund. Vermisst Ihr Euer Haus noch, Oblodra? Ja, ich sah, wie Ihr zusammenzucktet, als ich den Namen erwähnte. Traurig, dass es in Vergessenheit geriet, oder?~ [O#LLMA03]
+@182  = ~Ist das wichtig? Euer neues Spielzeug kämpfte gegen Ust Nathas Krieger und verließ das Unterreich unbeschadet.~ [O#LLKI14]
+@183  = ~Oh, ich kenne Eure seltsame "Hingabe" zur Königin, mein kleiner psionischer Freund. Vermisst Ihr Euer Haus noch, Oblodra? Ja, ich sah Euer Zusammenzucken, als ich den Namen erwähnte. Traurig, dass es in Vergessenheit geriet, oder?~ [O#LLMA03]
 @184  = ~Aber ich habe meine Zeit mit Euch schon genug verschwendet. Der Hauptmann meiner Wache wartet draußen auf Euch, Bhaalbrut. Tut was auch immer er Euch aufträgt, und lebt!~ [O#LLMA04]
 @185  = ~Passt auf Euch auf, Kind von Bhaal. Der Tod ist überall.~ [O#LLKI15]
 @186  = ~Was wollt Ihr noch von mir?~
@@ -216,7 +216,7 @@
 @215  = ~Ihr werdet diesen unverschämten Ton gefälligst lassen. Ich könnte Euren Kopf mit kinetischer Energie ganz leicht zerquetschen. Außerdem, wer würde Euch dann nach Hause teleportieren? Die Mutter Oberin bestimmt nicht.~
 @216  = ~Geht jetzt. Ich muss Vorbereitungen treffen. Und dankt Eurem Glück, dass Ihr immer noch lebendig seid, Bhaalbrut. Menzoberranzan ist nicht der Ort für lockere Sprüche, wenn Euer Name nicht Jarlaxle ist.~
 @217  = ~Redet mit mir nicht mehr darüber. Ich erinnere mich an Euren Fehler, aber es ist an Jarlaxle, über Eure Strafe zu entscheiden. Wenn Ihr ihn rettet, wird alles vergessen sein. Wenn nicht...~
-@218  = ~Ich kann das tun. Warum sollte ich?~
+@218  = ~Warum sollte ich das tun?~
 @219  = ~Weil ich es nicht länger ohne meine Seele aushalte.~
 @220  = ~Kommt schon, wir sind in Menzoberranzan! Müsst Ihr da WIRKLICH fragen?~
 @221  = ~Weil ich Euch nett frage?~
@@ -240,8 +240,8 @@
 @239  = ~Ihr behandelt mich wie eine Gleichgestellte, was Ihr nicht solltet. Jeder Drow ist besser als Ihr, Kind von Bhaal, bis Ihr gelernt habt, die pure Macht in Euren Venen zu kontrollieren.~
 @240  = ~Bis dahin seid Ihr nur ein Oberflächenbewohner und für die meisten Drow nur wenig mehr als ein Tier. Merkt Euch das gut.~
 @241  = ~Und wenn Jarlaxle am Ende lebt? Nicht sehr wahrscheinlich. Aber wenn er stirbt und es Eure Schuld ist? Ihr werdet nicht einmal genug Luft zum schreien haben.~
-@242  = ~Ds habe ich. Die Frage ist, ob Ihr sie ausführen könnt.~ [O#LLKI16]
-@243  = ~Ha! Ich bin fähig, effizient, und ganz besonders - unbesiegbar!~
+@242  = ~Das habe ich. Die Frage ist, ob Ihr sie ausführen könnt.~ [O#LLKI16]
+@243  = ~Ha! Ich bin fähig, effizient, und vorallem - unbesiegbar!~
 @244  = ~Als ob es je einen Zweifel gab. Sagt es mir schon!~
 @245  = ~Natürlich nicht. Ich bin ein unbedeutender <PRO_RACE> weit unter Eurer Beachtung. Was auch immer kann ich für den mächtigen Kimmuriel Oblodra anderes tun, außer unter einen Stein zu kriechen und still zu sterben?~
 @246  = ~Sarkasmus. Ich habe dieses plötzliche Verlangen, Euch zu foltern. Traurig, aber die Verantwortung für die Bregan D'aerthe und Jarlaxles Wohl hindern mich daran, diesem Impuls zu folgen.~
@@ -299,7 +299,7 @@
 @298  = ~Ich bin mir nicht sicher. Ein etwas kleinerer Mensch mit dunklem Haar und einem braun gebrannten Gesicht. Er sagte auch, dass Ihr nicht aufrichtig zu mit wart.~
 @299  = ~Was, Ihr könnt meine Gedanken nicht mehr lesen?~
 @300  = ~Vielleicht bin ich bereit, den einfachen Weg dieses Mal zu gehen. Aber nur eine Person hätte Euch helfen können.~
-@301  = ~Ihr erkanntet Artemis Entreri nicht? Seltsam. Ich dachte ein <PRO_MANWOMAN> mit Eurer Abenteurererfahrung würde <PRO_HISHER> erkennen.~
+@301  = ~Ihr erkanntet Artemis Entreri nicht? Seltsam. Ich dachte ein Mann mit solcher Abenteuererfahrung würde ihn kennen.~ ~Ihr erkanntet Artemis Entreri nicht? Seltsam. Ich dachte eine Frau mit solcher Abenteuererfahrung würde ihn kennen.~
 @302  = ~Artemis Entreri ist eine... schwierige Person. Die Dinge sind nicht so wie sie scheinen.~ [O#LLKI28]
 @303  = ~Dann klärt mich auf.~
 @304  = ~Habt Ihr mich nun belogen, oder nicht?~
@@ -344,7 +344,7 @@
 @343  = ~Eine gute Wahl. Ich würde diese Artefakte gerne in meine Finger bekommen.~
 @344  = ~Und Ihr wäret töricht, nicht dasselbe zu tun. Wir sind in ihrem Haus, umgeben von ihren Leuten. Zeigt nur die geringste Missachtung, und Ihr werdet sterben.~
 @345  = ~Ihr seid nicht alleine in Eurer Begierde. Mehrere Häuser haben es schon versucht und schlugen fehl.~
-@346  = ~Was auch immer Euch die Mutter Oberin oder ihre Lakaien sagen. Oder seid Ihr plötzlich taub geworden?~ [O#LLKI35]
+@346  = ~Was auch immer Euch die Mutter Oberin oder ihre Lakaien sagen. Oder seid Ihr plötzlich taub?~ [O#LLKI35]
 @347  = ~Erkundet die Stadt, wenn Ihr könnt. Die hiesigen Händler können Euch versorgen. Ihr werdet nie höher als der niedrigste Drow eingestuft, aber durch den Erwerb von mehr Prestige könnt Ihr Eure Position verbessern.~
 @348  = ~Bedeutet das, dass ich nicht mit Tentakelruten geschlagen werde, wenn ich einen Fehltritt mache?~
 @349  = ~Was kümmert es mich, was ein Lakai von Lolth von mir denkt?~
@@ -364,7 +364,7 @@
 @363  = ~... was Ihr nicht seid?~
 @364  = ~... was Ihr gerne wäret?~
 @365  = ~... wie der wahre Anführer der Bregan D'aerthe sein sollte?~
-@366  = ~Und Ihr braucht seine Verbindungen und seinen Einfluss. Habe vertanden.~
+@366  = ~Und Ihr braucht seine Verbindungen und seinen Einfluss. Habe verstanden.~
 @367  = ~Und ich wette dieser Erzmagier Gromph wird Euch nicht freundlich gesonnen sein, wenn Ihr seinen kleinen Bruder getötet habt.~
 @368  = ~Clever. Und falsch. Jarlaxle war für eine ganze Weile auf der Oberfläche mit Entreri gewesen, und doch wächst Bregan D'aerthe unter meinem Befehl.~
 @369  = ~Jarlaxles Verbindungen und Charme sind nicht alles, was ich suche. Das Haus Baenre würde mich nicht mit seinem Verlust in Verbindung bringen, weil sie den Angriff auf das Haus Jeven anordneten. Nein, es ist viel einfacher.~
@@ -438,7 +438,7 @@
 @437  = ~Sicher. Töte jeden, der etwas Rotes trägt, ja? Klingt spaßig.~
 @438  = ~Stellt Euch vor, jeder von ihnen hätte stattdessen ein kleines Stück Apfelkuchen...~
 @439  = ~Glaubt Ihr, das interessiert jemanden?~
-@440  = ~Bregan D'aerthe kennt nur eine Seite, Oberflächenbewohner: ihre eigene.~
+@440  = ~Bregan D'aerthe kennt nur eine Seite, Oberflächenbewohner: ihre Eigene.~
 @441  = ~Tötet sie alle und lasst Ströme von Blut zu mir zurückfliessen. Geht!~
 @442  = ~Raah !! Warum muss ich mich mit diesem Blödsinn abgeben? Möge Lolth Euch für ewig in ihren dämonischen Gruben foltern, Oberflächenbewohner!~
 @443  = ~Schon wieder zurück? Nun?~ [O#LLCA11]
@@ -497,7 +497,7 @@
 @496  = ~Gleichfalls.~
 @497  = ~Wo ist der Schutzstein, Entreri?~
 @498  = ~Der Angriff auf dieses Haus wird bald beginnen. Ihr müsst Euch beeilen.~ [O#LLAR07]
-@499  = ~Jey'Re Jeven hat den Schutzstein. Er ist der vertraute Berater und Militärkommandant der Mutter Oberin. Unterschätzt ihn nicht.~ [O#LLAR08]
+@499  = ~Jey'Re Jeven hat den ersten Schutzstein. Er ist der vertraute Berater und Militärkommandant der Mutter Oberin. Unterschätzt ihn nicht.~ [O#LLAR08]
 @500  = ~Werde ich nicht. Ich werde ihn einfach töten.~
 @501  = ~Wo kann ich ihn finden?~
 @502  = ~Vor einer Stunde war er noch in den Lustkammmern. Er könnte immer noch dort sein, und er wird wohl nicht alleine sein.~ [O#LLAR09]
@@ -511,10 +511,10 @@
 @510  = ~Ihr hättet wenigstens helfen können.~
 @511  = ~Nicht schlecht, wie?~
 @512  = ~Es gibt draußen einen heftigen Kampf. Oblodra wäre ihm beinahe zum Opfer gefallen. Glücklicherweise hatte er für dieses Unterfangen einen Meuchelmörder an seiner Seite.~ [O#LLAR14]
-@513  = ~Ich sehe, Ihr habt Euch den Rücken freigehalten. Zu schade, dass niemand den meinen freihält.~
+@513  = ~Ich sehe, Ihr habt Euch den Rücken freigehalten. Zu schade, dass niemand meinen Rücken freihält.~
 @514  = ~Und... was jetzt?~
 @515  = ~Findet den Schutzstein für den Schatz. Oblodra und ich werden Euch den Rücken freihalten.~ [O#LLAR15]
-@516  = ~Oblodra. Und die Bhaalbrut. Ein reizendes Duo. Ich nehme an, dass Ihr Euch amüsiert, nachdem Ihr mich verraten habt?~ [O#LLMA05]
+@516  = ~Oblodra... und die Bhaalbrut. Solch ein reizendes Duo. Amüsiert Ihr Euch auch gut, nachdem Ihr mich verraten habt?~ [O#LLMA05]
 @517  = ~(Ein unsichtbarer Schild drückt plötzlich auf Eure Schläfen. Es ist schwerelos, aber unbequem und das Atmen fällt schwer. Ihr merkt, dass Kimmuriel es schuf, um die Mutter Oberin daran zu hindern, die Absicht Jarlaxles und des Hauses Baenre sie zu töten zu entdecken.)~
 @518  = ~Nicht im geringsten, Mutter Oberin.~ [O#LLKI39]
 @519  = ~Nein? Wie soll ich es dann nennen? Ihr habt meinen Hauptmann getötet, hinter meinem Rücken gegen die Githyanki agiert und seid ein Bündnis mit den Illithiden eingegangen - gibt es sonst noch etwas, das ich nicht weiß?~ [O#LLMA06]
@@ -538,7 +538,7 @@
 @537  = ~Ohne Zweifel grauenhaft.~ [O#LLKI41]
 @538  = ~Ruhe! Er muss sterben. Findet ihn auf der größten Plattform, wo er mit seinen geldgierigen "Freunden" feiert, und tötet ihn schnell. Und dieses Mal will ich keine Versprechen und Lügen: Ich will seinen Kopf. Tut es, oder Ihr fallt bei mir in Ungnade.~ [O#LLMA10]
 @539  = ~Ein Oberflächenbewohner? Wer seid Ihr? ... Ah. Mutter sagte, dass ein Kind eines toten Oberflächengottes nach ihrer Pfeife tanzt. Ihr seid allerdings ein bisschen alt für ein Kind.~ [O#LLLOR1]
-@540  = ~Ich bin <CHARNAME>, Kin des Bhaal, und Eure Mutter hat mich geschickt, um Euch zu töten.~
+@540  = ~Ich bin <CHARNAME>, Kind des Bhaal, und Eure Mutter hat mich geschickt, um Euch zu töten.~
 @541  = ~Bhaal war nicht irgendein toter Oberflächengott. Er war der Fürst des Mordes. Verstanden?~
 @542  = ~Wisst Ihr, warum ich hier bin?~
 @543  = ~Ihr seid natürlich hier, um mich zu entsorgen. Meine liebe Mutter las wohl meine Briefe, oder? Strategische Pläne für die Erweiterung meiner Söldnergrupppe, Anschluss an Bregan D'aerthe, Rauben der Schätze des Hauses...~ [O#LLLOR2]
@@ -607,7 +607,7 @@
 @606  = ~Genau.~
 @607  = ~Nun... sagen wir mal es würde mich nicht stören, wenn dem so wäre.~
 @608  = ~Oh, stört Euch nicht an mir. Fahrt fort. Die Bruderschaft zwischen Männern und Drow... Alles klar.~
-@609  = ~Dann ist dies genau das, was wir tun werden. Der Schatz gehört Euch, aber achtet auf die Fallen und nähert Euch nicht dem Ausgang - ich glaube, ich sah einen Demileichnam.~ [O#LLJAR6]
+@609  = ~Dann ist dies genau das, was wir tun werden. Der Schatz gehört Euch, aber achtet auf die Fallen und nähert Euch nicht dem Ausgang - ich glaube, dort sah ich eben einen Halbleichnam.~ [O#LLJAR6]
 @610  = ~Endlich ist unsere Aufgabe beendet. Holt Euch schnell Eure Belohnung, <CHARNAME> - es ist höchste Zeit, das wir zurück nach Hause gehen und um Eure Seele kämpfen.~
 @611  = ~Der Schatz gehört mir! Mir! Äh, ich meinte, Euch, natürlich. Natürlich.~
 @612  = ~Endlich! Hurra! <CHARNAME>, wir haben es geschafft! Lasst mich noch nach Fallen suchen...~
@@ -658,7 +658,7 @@
 @657  = ~Glaubt mir, ich würde es ja gerne. Vielleicht wenn man noch ein paar Mephite hinzuruft, um ihre Konzentration zu brechen. Das hätte Stil gehabt. Ein einfacher Verlangsamungszauber? Lächerlich.~
 @658  = ~Es könnte jemand anderes gewesen sein... vielleicht. Aber warum? Die Mutter Oberin hat zugesehen. Wer wäre so idiotisch, ihr den Spaß verderben zu wollen?~
 @659  = ~Ihr verschwendet Eure Zeit, Vintul. Würdet Ihr den Ausgang unseres Kampfes einem Oberflächenbewohner überlassen?~
-@660  = ~Ich bin es leid, hier zu stehen und zu diskutieren. Wenn dieser <PRO_RACE> den Fall nicht lösen kann, werden wir ihn den Spinnen vorwerfen. Problem gelöst.~ 
+@660  = ~Ich bin es leid, hier zu stehen und zu diskutieren. Wenn dieser <PRO_RACE> den Fall nicht lösen kann, werden wir ihn den Spinnen vorwerfen. Problem gelöst.~
 @661  = ~Klingt gut. Nun liegt es in Euren Händen, Oberflächenbewohner. Kommt wieder, wenn Ihr den Fall gelöst habt, wenn Ihr Euch traut.~
 @662  = ~Was? Was wollt Ihr?~
 @663  = ~Eure Lügen werden mich nicht von meiner Meinung abbringen, Jergan. Ich bin intelligent genug, um sie zu durchschauen. Sagt mir die Wahrheit.~
@@ -773,7 +773,7 @@
 @772  = ~Narr! Jetzt, da wir wissen wo der Kalach-Cha ist, ist dieser da für uns nutzlos!~
 @773  = ~Sprecht mich nicht an, <RACE>. Ich bin von weit her gekommen und muss meditieren.~
 @774  = ~Ihr habt erst kürzlich mit einer psionischen Kreatur gesprochen. Ein Illithid? Nein... ein Drow. Seltsam.~
-@775  = ~Was wollt Ihr, <PRO_RACE>?*~ [EFF_P05]
+@775  = ~*Was wollt Ihr, <PRO_RACE>?*~ [EFF_P05]
 @776  = ~Ähm... könnt Ihr mich verstehen? Wie kommuniziert Ihr?~
 @777  = ~Ich komme in Frieden. Ich wünsche ein Bündnis.~
 @778  = ~Kimmuriel Oblodra hat mich geschickt, um mit Euch zu verhandeln.~
@@ -1090,8 +1090,8 @@
 @1089 = ~Na schön. Fangt an.~
 @1090 = ~Nicht interessiert.~
 @1091 = ~Es gibt Liegen und Kissen im oberen Stockwerk und genug erlesenen Wein, um eine Duergarhorde schnarchen zu lassen. Um Eure Begleiter wird sich gut gekümmert werden.~
-@1092 = ~Aber Ihr... verdient etwas Spezielles. Kommt, mein exotischer Tiger: es ist an der zeit zu erfahren, was Menzoberranzan Euch zu bieten hat.~
-@1093 = ~Aber Ihr... verdient etwas Spezielles. Kommt, meine exotische Tigerin: es ist an der zeit zu erfahren, was Menzoberranzan Euch zu bieten hat.~
+@1092 = ~Aber Ihr... verdient etwas Spezielles. Kommt, mein exotischer Tiger: es ist an der Zeit zu erfahren, was Menzoberranzan Euch zu bieten hat.~
+@1093 = ~Aber Ihr... verdient etwas Spezielles. Kommt, meine exotische Tigerin: es ist an der Zeit zu erfahren, was Menzoberranzan Euch zu bieten hat.~
 @1094 = ~Willkommen an meinem Stand, geehrter Gast der Mutter Oberin. Ihr würdet gut daran tun, Euch den Rücken freizuhalten... und meine Pfeile und Bolzen können wie keine anderen Geschosse, Euch dabei helfen.~
 @1095 = ~Zeigt mir was Ihr anzubieten habt.~
 @1096 = ~Vielleicht ein anderes Mal.~
