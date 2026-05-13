@@ -18,7 +18,9 @@ ALWAYS
     END
   END
 
-
+  // No exception, everything needs to be converted
+  ACTION_DEFINE_ARRAY O#noconvert BEGIN Install END
+  
   // Only setup-Mod.tra needs to be reloaded
   ACTION_DEFINE_ARRAY O#reload BEGIN Setup-Sellswords END
 
@@ -28,6 +30,7 @@ ALWAYS
       infer_charsets = 1
     STR_VAR
       tra_path = EVAL ~%MOD_FOLDER%~
+	  noconvert_array = O#noconvert
       reload_array = O#reload
   END
 END
@@ -37,7 +40,7 @@ AUTO_TRA ~Sellswords/%s~
 LANGUAGE ~English~ ~English~ ~Sellswords/English/Setup-Sellswords.tra~
 LANGUAGE ~Russian~ ~Russian~ ~Sellswords/Russian/Setup-Sellswords.tra~
 LANGUAGE ~German (by Gerri)~ ~German~ ~Sellswords/German/Setup-Sellswords.tra~
-LANGUAGE ~Chinese (by Merzbau)~ ~Schinese~ ~Sellswords/Schinese/Setup-Sellswords.tra~
+LANGUAGE ~Chinese (by Merzbau)~ ~Schinese~ ~Sellswords/Schinese/Install.tra~
 LANGUAGE ~French~ ~french~ ~Sellswords/french/Setup-Sellswords.tra~
 LANGUAGE ~Polish (by Stars of Mystra)~ ~polish~ ~Sellswords/polish/Setup-Sellswords.tra~
 
